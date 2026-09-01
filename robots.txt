@@ -1,0 +1,6 @@
+User-agent: *
+Allow: /
+
+# Sitemaps
+Sitemap: https://avroratech.co/sitemap.xml
+Sitemap: https://thel-vatham.github.io/avrora-web/sitemap.xml

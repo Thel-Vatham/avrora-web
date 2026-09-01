@@ -3065,3 +3065,249 @@ textarea.form-control {
     color: var(--accent-cyan);
     font-size: 1rem;
 }
+
+/* ============================================================
+   Layer 36: High-Conversion Elements (Google Ads & CRO)
+   ============================================================ */
+
+/* ─── Hero Trust Bar ─── */
+.hero-trust-bar {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: var(--space-sm) var(--space-md);
+    margin-top: var(--space-md);
+    padding-top: var(--space-sm);
+    border-top: 1px solid var(--glass-border);
+}
+
+.trust-item {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    font-size: var(--text-xs);
+    color: var(--text-secondary);
+    font-weight: 500;
+}
+
+.trust-icon {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    background: hsla(var(--hue-cyan), 100%, 50%, 0.12);
+    color: var(--accent-cyan);
+    font-size: 0.75rem;
+    font-weight: 700;
+}
+
+/* ─── Why Us & Comparison Matrix ─── */
+.comparison-container {
+    margin-top: var(--space-lg);
+}
+
+.comparison-table-wrap {
+    overflow-x: auto;
+    border-radius: var(--radius-lg);
+    background: var(--glass-bg);
+    border: 1px solid var(--glass-border);
+    backdrop-filter: blur(var(--glass-blur));
+    box-shadow: 0 16px 40px var(--shadow-color);
+}
+
+.comparison-table {
+    width: 100%;
+    border-collapse: collapse;
+    min-width: 600px;
+    font-size: var(--text-sm);
+    text-align: left;
+}
+
+.comparison-table th,
+.comparison-table td {
+    padding: 16px 20px;
+    border-bottom: 1px solid var(--glass-border);
+}
+
+.comparison-table th {
+    font-family: var(--font-display);
+    font-weight: 700;
+    color: var(--text-primary);
+    background: hsla(240, 20%, 8%, 0.6);
+}
+
+.comparison-table th.col-avrora {
+    color: var(--accent-cyan);
+    background: hsla(var(--hue-cyan), 100%, 50%, 0.08);
+    border-left: 1px solid hsla(var(--hue-cyan), 100%, 50%, 0.2);
+    border-right: 1px solid hsla(var(--hue-cyan), 100%, 50%, 0.2);
+    position: relative;
+}
+
+.comparison-table td.col-avrora {
+    background: hsla(var(--hue-cyan), 100%, 50%, 0.04);
+    border-left: 1px solid hsla(var(--hue-cyan), 100%, 50%, 0.15);
+    border-right: 1px solid hsla(var(--hue-cyan), 100%, 50%, 0.15);
+    font-weight: 600;
+    color: var(--text-primary);
+}
+
+.comparison-check {
+    color: var(--status-success);
+    font-weight: 800;
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+}
+
+.comparison-cross {
+    color: hsl(0, 75%, 65%);
+    font-weight: 600;
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+}
+
+/* ─── Industries Grid ─── */
+.industries-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+    gap: var(--space-md);
+    margin-top: var(--space-lg);
+}
+
+.industry-card {
+    background: var(--glass-bg);
+    border: 1px solid var(--glass-border);
+    border-radius: var(--radius-md);
+    padding: var(--space-md);
+    transition: transform var(--duration-normal) var(--ease-out-expo), border-color var(--duration-normal), box-shadow var(--duration-normal);
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.industry-card:hover {
+    transform: translateY(-4px);
+    border-color: var(--glass-border-hover);
+    box-shadow: 0 12px 32px var(--shadow-color);
+}
+
+.industry-icon {
+    font-size: 2rem;
+    line-height: 1;
+}
+
+.industry-title {
+    font-family: var(--font-display);
+    font-size: var(--text-base);
+    font-weight: 700;
+    color: var(--text-primary);
+}
+
+.industry-desc {
+    font-size: var(--text-xs);
+    color: var(--text-secondary);
+    line-height: 1.5;
+}
+
+.industry-tag {
+    display: inline-block;
+    padding: 3px 8px;
+    border-radius: var(--radius-full);
+    background: hsla(var(--hue-cyan), 100%, 50%, 0.1);
+    color: var(--accent-cyan);
+    font-size: 0.7rem;
+    font-weight: 600;
+    align-self: flex-start;
+    margin-top: auto;
+}
+
+/* ─── Guarantees Grid ─── */
+.guarantees-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    gap: var(--space-md);
+    margin-top: var(--space-lg);
+}
+
+.guarantee-card {
+    background: var(--glass-bg);
+    border: 1px solid var(--glass-border);
+    border-radius: var(--radius-md);
+    padding: var(--space-md);
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 8px;
+}
+
+.guarantee-icon {
+    width: 48px;
+    height: 48px;
+    border-radius: 50%;
+    background: hsla(var(--hue-cyan), 100%, 50%, 0.12);
+    color: var(--accent-cyan);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.4rem;
+    margin-bottom: 4px;
+}
+
+.guarantee-title {
+    font-family: var(--font-display);
+    font-size: var(--text-sm);
+    font-weight: 700;
+    color: var(--text-primary);
+}
+
+.guarantee-desc {
+    font-size: var(--text-xs);
+    color: var(--text-secondary);
+    line-height: 1.4;
+}
+
+/* ─── WhatsApp Pulse & Badge ─── */
+.floating-wa-btn {
+    animation: waGlowPulse 4s infinite;
+}
+
+.floating-wa-btn .wa-pulse-dot {
+    width: 9px;
+    height: 9px;
+    background: #55ff77;
+    border-radius: 50%;
+    position: absolute;
+    top: 6px;
+    right: 8px;
+    box-shadow: 0 0 8px #55ff77;
+    animation: waDotBlink 2s infinite ease-in-out;
+}
+
+@keyframes waGlowPulse {
+    0%, 100% {
+        box-shadow: 0 8px 24px hsla(142, 70%, 40%, 0.4);
+    }
+    50% {
+        box-shadow: 0 12px 36px hsla(142, 85%, 45%, 0.7), 0 0 18px hsla(142, 90%, 50%, 0.5);
+    }
+}
+
+@keyframes waDotBlink {
+    0%, 100% { opacity: 1; transform: scale(1); }
+    50% { opacity: 0.4; transform: scale(0.8); }
+}
+
+@media (max-width: 640px) {
+    .hero-trust-bar {
+        justify-content: center;
+    }
+    .comparison-table th,
+    .comparison-table td {
+        padding: 12px 14px;
+    }
+}

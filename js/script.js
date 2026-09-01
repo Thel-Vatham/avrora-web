@@ -312,6 +312,30 @@
         });
     }
 
+    /* ─── Analytics & Google Ads Conversion Event Tracker ─── */
+    window.trackConversion = (eventName, params = {}) => {
+        window.dataLayer = window.dataLayer || [];
+        window.dataLayer.push({
+            event: eventName,
+            ...params,
+            timestamp: new Date().toISOString()
+        });
+
+        if (typeof window.gtag === 'function') {
+            window.gtag('event', eventName, params);
+        }
+    };
+
+    // Auto-bind elements with data-track attributes
+    document.addEventListener('click', (e) => {
+        const trackEl = e.target.closest('[data-track]');
+        if (trackEl) {
+            const eventName = trackEl.getAttribute('data-track') || 'cta_click';
+            const eventLabel = trackEl.getAttribute('data-track-label') || trackEl.textContent.trim().slice(0, 40);
+            window.trackConversion(eventName, { label: eventLabel });
+        }
+    });
+
     /* ─── B2B Lead Contact Form ─── */
     const leadForm = $('#lead-form');
     if (leadForm) {
@@ -334,6 +358,12 @@
                 return;
             }
 
+            // Track conversion event for Google Ads & Analytics
+            window.trackConversion('generate_lead', {
+                service_requested: service,
+                has_company: company !== 'No especificada'
+            });
+
             // Construct formatted WhatsApp message
             const waMessage = `Hola Avrora Tech 👋🏼\n\n` +
                 `*Solicitud de Consulta Técnica*\n` +
@@ -348,14 +378,14 @@
 
             if (feedback) {
                 feedback.className = 'form-feedback is-success';
-                feedback.innerHTML = `✓ Solicitud estructurada con éxito. Conectando con ingeniería en WhatsApp...`;
+                feedback.innerHTML = `✓ Solicitud enviada. Conectando con ingeniería en WhatsApp...`;
             }
 
             setTimeout(() => {
                 window.open(waUrl, '_blank');
                 leadForm.reset();
                 if (feedback) feedback.className = 'form-feedback';
-            }, 1000);
+            }, 900);
         });
     }
 
