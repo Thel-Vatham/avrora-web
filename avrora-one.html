@@ -1,0 +1,372 @@
+<!DOCTYPE html>
+<html lang="es-CO">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AVRORA ONE — Agente de Inteligencia Artificial Local y Soberano | Avrora Tech</title>
+    <meta name="description" content="AVRORA ONE: Plataforma cognitiva modular para Windows. Inferencia de LLMs 100% local con llama.cpp, embeddings semánticos ONNX, memoria SQLite WAL y visión en CPU. Cero dependencia de la nube.">
+    <meta name="keywords" content="agente ia local, llm local windows, inteligencia artificial privada empresas, llama cpp python, embeddings onnx local, avrora one">
+    <meta name="author" content="Avrora Soluciones Tecnológicas">
+    <meta name="theme-color" content="#05050A">
+    <meta name="robots" content="index, follow">
+    <link rel="canonical" href="https://avroratech.co/avrora-one.html">
+
+    <!-- Open Graph -->
+    <meta property="og:type" content="website">
+    <meta property="og:site_name" content="Avrora Tech">
+    <meta property="og:url" content="https://avroratech.co/avrora-one.html">
+    <meta property="og:title" content="AVRORA ONE — Agente de IA Local y Privado para Windows">
+    <meta property="og:description" content="Plataforma cognitiva modular con inferencia local, visión, memoria persistente y 22+ herramientas de sistema. Cero fuga de datos.">
+    <meta property="og:image" content="https://avroratech.co/assets/images/logo.png">
+    <meta property="og:locale" content="es_CO">
+
+    <!-- Fonts & Styles -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Outfit:wght@400;600;700;800&family=JetBrains+Mono:wght@400;600&display=swap" rel="stylesheet">
+    <link rel="icon" type="image/svg+xml" href="assets/icons/favicon.svg">
+    <link rel="stylesheet" href="css/style.css">
+    <script>
+        (function() {
+            var t = localStorage.getItem('avrora-theme');
+            if (t === 'light' || (!t && window.matchMedia && window.matchMedia('(prefers-color-scheme: light)').matches)) {
+                document.documentElement.classList.add('light-theme');
+            }
+        })();
+    </script>
+</head>
+<body>
+    <a href="#arquitectura" class="skip-link">Saltar al contenido principal</a>
+    <div class="aurora-bg" aria-hidden="true"></div>
+    <div class="noise-overlay" aria-hidden="true"></div>
+
+    <!-- ─── Header ─── -->
+    <header class="glass-header" id="main-header">
+        <div class="container nav-container">
+            <a href="index.html" class="logo-link" aria-label="Avrora Tech — Inicio">
+                <img src="assets/images/logo.png" alt="Avrora Logo" class="logo-img" width="44" height="44">
+                <span class="logo-text">AVRORA <span class="highlight">TECH</span></span>
+            </a>
+            <nav class="desktop-nav" aria-label="Navegación principal">
+                <a href="index.html">Inicio</a>
+                <a href="servicios.html">Servicios</a>
+                <a href="#arquitectura" class="active">AVRORA ONE</a>
+                <a href="#comparativa-privacidad">Privacidad</a>
+                <a href="#contacto-demo" class="btn btn-outline" data-track="avrora_nav_demo">Solicitar Demo</a>
+                <button class="theme-toggle-btn" aria-label="Cambiar modo de color" title="Cambiar modo de color">
+                    <svg class="sun-icon" viewBox="0 0 24 24"><circle cx="12" cy="12" r="5"/><path d="M12 1v2M12 21v2M4.22 4.22l1.42 1.42M18.36 18.36l1.42 1.42M1 12h2M21 12h2M4.22 19.78l1.42-1.42M18.36 5.64l1.42-1.42"/></svg>
+                    <svg class="moon-icon" viewBox="0 0 24 24"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/></svg>
+                </button>
+            </nav>
+            <button class="mobile-menu-btn" id="mobile-toggle" aria-label="Abrir menú" aria-expanded="false">
+                <span class="bar"></span>
+                <span class="bar"></span>
+                <span class="bar"></span>
+            </button>
+        </div>
+        <nav class="mobile-nav" id="mobile-nav" aria-label="Navegación móvil">
+            <div class="mobile-theme-wrapper">
+                <span class="mobile-theme-label">Modo de color</span>
+                <button class="theme-toggle-btn" aria-label="Cambiar modo de color" title="Cambiar modo de color">
+                    <svg class="sun-icon" viewBox="0 0 24 24"><circle cx="12" cy="12" r="5"/><path d="M12 1v2M12 21v2M4.22 4.22l1.42 1.42M18.36 18.36l1.42 1.42M1 12h2M21 12h2M4.22 19.78l1.42-1.42M18.36 5.64l1.42-1.42"/></svg>
+                    <svg class="moon-icon" viewBox="0 0 24 24"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/></svg>
+                </button>
+            </div>
+            <a href="index.html">Inicio</a>
+            <a href="servicios.html">Servicios</a>
+            <a href="#arquitectura">AVRORA ONE</a>
+            <a href="#comparativa-privacidad">Privacidad</a>
+            <a href="#contacto-demo">Solicitar Demo</a>
+        </nav>
+    </header>
+
+    <main>
+        <!-- ─── Hero AVRORA ONE ─── -->
+        <section class="section page-header" style="padding-top: calc(var(--header-h) + var(--space-xl));">
+            <div class="container">
+                <div class="badge reveal" style="background:hsla(var(--hue-purple),80%,55%,0.12); border-color:hsla(var(--hue-purple),80%,55%,0.25); color:var(--accent-purple);">
+                    PROYECTO CORE EN DESARROLLO
+                </div>
+                <h1 class="hero-title reveal" style="max-width:900px; margin-inline:auto; text-align:center;">
+                    AVRORA ONE — Agente Cognitivo <span class="gradient-text">100% Local y Soberano</span>
+                </h1>
+                <p class="hero-subtitle reveal" style="max-width:760px; margin:0 auto var(--space-xl); text-align:center; color:var(--text-secondary); line-height:1.7;">
+                    Plataforma de inteligencia artificial modular para Windows. Razonamiento profundo con modelos GGUF en hardware local, memoria semántica en SQLite WAL, visión por computador y más de 22 herramientas nativas de sistema. Cero fuga de datos a la nube.
+                </p>
+
+                <div class="reveal" style="display:flex; justify-content:center; gap:var(--space-md); flex-wrap:wrap; margin-bottom:var(--space-2xl);">
+                    <a href="https://wa.me/573004002881?text=Hola%20Avrora%20Tech,%20quiero%20conocer%20más%20sobre%20AVRORA%20ONE%20para%20mi%20empresa"
+                        target="_blank" rel="noopener" class="btn btn-primary" data-track="avrora_hero_demo">
+                        Solicitar Demostración Técnica →
+                    </a>
+                    <a href="#arquitectura" class="btn btn-secondary" data-track="avrora_hero_arch">
+                        Ver Especificaciones Técnicas ↓
+                    </a>
+                </div>
+
+                <!-- Resumen de Capacidades Clave -->
+                <div class="stats-grid stagger" style="margin-top:var(--space-xl);">
+                    <div class="stat-item reveal">
+                        <div class="stat-number">0 ms</div>
+                        <div class="stat-label">FastPath determinista</div>
+                    </div>
+                    <div class="stat-item reveal">
+                        <div class="stat-number">100%</div>
+                        <div class="stat-label">Privacidad / Offline</div>
+                    </div>
+                    <div class="stat-item reveal">
+                        <div class="stat-number">22+</div>
+                        <div class="stat-label">Herramientas nativas</div>
+                    </div>
+                    <div class="stat-item reveal">
+                        <div class="stat-number">GGUF</div>
+                        <div class="stat-label">Inferencia llama.cpp</div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ─── Especificaciones de Arquitectura ─── -->
+        <section id="arquitectura" class="section">
+            <div class="container">
+                <div class="section-header reveal">
+                    <span class="section-label">Arquitectura del Sistema</span>
+                    <h2 class="section-title">Ingeniería modular de <span class="highlight">alto rendimiento</span></h2>
+                    <p class="section-desc">Diseñado desde cero con código tipado, pruebas automatizadas exhaustivas y modularidad por dominios.</p>
+                </div>
+
+                <div class="grid cards-grid stagger">
+                    <!-- Módulo 1 -->
+                    <div class="glass-card reveal">
+                        <div class="card-icon">
+                            <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="4" y="4" width="16" height="16" rx="2"/><rect x="9" y="9" width="6" height="6"/><line x1="9" y1="2" x2="9" y2="4"/><line x1="15" y1="2" x2="15" y2="4"/><line x1="9" y1="20" x2="9" y2="22"/><line x1="15" y1="20" x2="15" y2="22"/><line x1="20" y1="9" x2="22" y2="9"/><line x1="20" y1="14" x2="22" y2="14"/><line x1="2" y1="9" x2="4" y2="9"/><line x1="2" y1="14" x2="4" y2="14"/></svg>
+                        </div>
+                        <h3>Inferencia Local & Multi-Proveedor</h3>
+                        <p>Ejecución ultra-rápida de modelos cuantizados GGUF mediante servidor integrado `llama.cpp`. Enrutador inteligente con failover dinámico entre modo local (100% offline), nube (OpenAI/DeepSeek) y FastPath determinista sin latencia.</p>
+                    </div>
+
+                    <!-- Módulo 2 -->
+                    <div class="glass-card reveal">
+                        <div class="card-icon">
+                            <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/><line x1="16" y1="13" x2="8" y2="13"/><line x1="16" y1="17" x2="8" y2="17"/></svg>
+                        </div>
+                        <h3>Memoria Semántica & Persistencia</h3>
+                        <p>Persistencia en SQLite3 con modo WAL como fuente única de verdad. Embeddings vectoriales calculados 100% en local mediante ONNX FastEmbed con búsqueda semántica por similitud coseno, crónica temporal y registro de preferencias.</p>
+                    </div>
+
+                    <!-- Módulo 3 -->
+                    <div class="glass-card reveal">
+                        <div class="card-icon">
+                            <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><path d="M12 8v4l3 3"/></svg>
+                        </div>
+                        <h3>Percepción & Control de Entorno</h3>
+                        <p>Visión por computador ligera (CLIP + OCR optimizado para CPU) para inspección de pantalla y documentos. Control directo de ventanas activas, administración de procesos, inspección de medios y orquestación de tareas en segundo plano.</p>
+                    </div>
+
+                    <!-- Módulo 4 -->
+                    <div class="glass-card reveal">
+                        <div class="card-icon">
+                            <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="3" width="20" height="14" rx="2"/><line x1="8" y1="21" x2="16" y2="21"/><line x1="12" y1="17" x2="12" y2="21"/></svg>
+                        </div>
+                        <h3>Interfaces Nativas Flexibles</h3>
+                        <p>Doble punto de entrada según las necesidades: aplicación de escritorio nativa sin bordes con System Tray interactivo y streaming SSE en tiempo real, o consola interactiva CLI REPL para entornos de terminal y servidores.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ─── Comparativa de Privacidad vs Nube ─── -->
+        <section id="comparativa-privacidad" class="section about-section">
+            <div class="container">
+                <div class="section-header reveal">
+                    <span class="section-label">Soberanía de Datos</span>
+                    <h2 class="section-title">AVRORA ONE frente a <span class="gradient-text">soluciones en la nube</span></h2>
+                    <p class="section-desc">Comparativa técnica para organizaciones que manejan información estratégica o confidencial.</p>
+                </div>
+
+                <div class="comparison-container reveal">
+                    <div class="comparison-table-wrap">
+                        <table class="comparison-table">
+                            <thead>
+                                <tr>
+                                    <th>Característica</th>
+                                    <th class="col-avrora">AVRORA ONE (Local)</th>
+                                    <th>Asistentes en la Nube</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td><strong>Privacidad &amp; Residencia de Datos</strong></td>
+                                    <td class="col-avrora"><span class="comparison-check">✓ 100% en su máquina (cero tráfico externo)</span></td>
+                                    <td><span class="comparison-cross">✕ Enviado a servidores de terceros en el exterior</span></td>
+                                </tr>
+                                <tr>
+                                    <td><strong>Operación sin Conexión (Offline)</strong></td>
+                                    <td class="col-avrora"><span class="comparison-check">✓ Totalmente funcional sin internet</span></td>
+                                    <td><span class="comparison-cross">✕ Inoperativo sin conexión continua</span></td>
+                                </tr>
+                                <tr>
+                                    <td><strong>Costo Operativo Recurrente</strong></td>
+                                    <td class="col-avrora"><span class="comparison-check">✓ Cero costo de tokens por inferencia local</span></td>
+                                    <td><span class="comparison-cross">✕ Pago mensual continuo por suscripción o consumo</span></td>
+                                </tr>
+                                <tr>
+                                    <td><strong>Integración con el Sistema Operativo</strong></td>
+                                    <td class="col-avrora"><span class="comparison-check">✓ Visión de pantalla, archivos y procesos de Windows</span></td>
+                                    <td><span class="comparison-cross">✕ Aislado dentro de una pestaña del navegador</span></td>
+                                </tr>
+                                <tr>
+                                    <td><strong>Riesgo de Fugas de Información</strong></td>
+                                    <td class="col-avrora"><span class="comparison-check">✓ Nulo por arquitectura desconectada</span></td>
+                                    <td><span class="comparison-cross">✕ Sujeto a políticas de privacidad del proveedor</span></td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ─── Contacto / Solicitar Demostración ─── -->
+        <section id="contacto-demo" class="section">
+            <div class="container">
+                <div class="contact-card reveal">
+                    <div class="contact-grid-container">
+                        <div class="contact-info-side">
+                            <span class="badge">Acceso Empresarial</span>
+                            <h2 class="contact-info-title">¿Interesado en implementar <span class="gradient-text">IA Local</span> en su empresa?</h2>
+                            <p class="contact-info-desc">
+                                Ofrecemos demostraciones técnicas en vivo y evaluaciones de viabilidad para organizaciones que requieren procesar documentos confidenciales, automatizar tareas de escritorio o desplegar asistentes soberanos.
+                            </p>
+                            <div class="contact-direct-items">
+                                <a href="https://wa.me/573004002881?text=Hola%20Avrora%20Tech,%20quiero%20agendar%20una%20demostración%20de%20AVRORA%20ONE"
+                                    target="_blank" rel="noopener" class="contact-item">
+                                    <span class="contact-icon">
+                                        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+                                    </span>
+                                    <span>Agendar Demostración por WhatsApp</span>
+                                </a>
+                                <a href="mailto:avroraonetech@gmail.com" class="contact-item">
+                                    <span class="contact-icon">
+                                        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
+                                    </span>
+                                    <span>avroraonetech@gmail.com</span>
+                                </a>
+                            </div>
+                        </div>
+
+                        <div class="contact-form-side">
+                            <form id="lead-form" class="b2b-form">
+                                <div class="form-row">
+                                    <div class="form-group">
+                                        <label for="form-name" class="form-label">Nombre Completo <span class="required">*</span></label>
+                                        <input type="text" id="form-name" name="name" class="form-control" placeholder="Ej. Carlos Mendoza" required autocomplete="name">
+                                    </div>
+                                    <div class="form-group">
+                                        <label for="form-company" class="form-label">Empresa / Organización</label>
+                                        <input type="text" id="form-company" name="company" class="form-control" placeholder="Ej. Logística Andina S.A.S" autocomplete="organization">
+                                    </div>
+                                </div>
+                                <div class="form-row">
+                                    <div class="form-group">
+                                        <label for="form-contact" class="form-label">Teléfono / WhatsApp <span class="required">*</span></label>
+                                        <input type="tel" id="form-contact" name="contact" class="form-control" placeholder="Ej. +57 300 123 4567" required autocomplete="tel">
+                                    </div>
+                                    <div class="form-group">
+                                        <label for="form-service" class="form-label">Interés Principal</label>
+                                        <select id="form-service" name="service" class="form-control">
+                                            <option value="Demo Técnica AVRORA ONE">Demostración Técnica de AVRORA ONE</option>
+                                            <option value="Implementación IA Local">Implementación de IA Local en Empresa</option>
+                                            <option value="Automatización Documental OCR">Automatización Documental & OCR</option>
+                                            <option value="Otro Requerimiento">Otro requerimiento a medida</option>
+                                        </select>
+                                    </div>
+                                </div>
+                                <div class="form-group">
+                                    <label for="form-message" class="form-label">Breve descripción de su necesidad <span class="required">*</span></label>
+                                    <textarea id="form-message" name="message" class="form-control" placeholder="Describa el flujo o tipo de información confidencial que desea procesar..." required></textarea>
+                                </div>
+                                <div class="form-group">
+                                    <label class="form-checkbox-container">
+                                        <input type="checkbox" id="form-habeas" name="habeas" required>
+                                        <span class="custom-checkbox"></span>
+                                        <span>Acepto la <a class="form-legal-link" id="trigger-privacy-modal" role="button">Política de Tratamiento de Datos Personales</a> (Ley 1581 de 2012).</span>
+                                    </label>
+                                </div>
+                                <div id="form-feedback" class="form-feedback"></div>
+                                <button type="submit" class="btn btn-primary" style="width: 100%; justify-content: center;">
+                                    Enviar solicitud técnica →
+                                </button>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- ─── Footer ─── -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-grid">
+                <div>
+                    <a href="index.html" class="logo-link" style="margin-bottom: var(--space-sm); display:inline-flex;">
+                        <img src="assets/images/logo.png" alt="Avrora Logo" class="logo-img" width="38" height="38">
+                        <span class="logo-text">AVRORA <span class="highlight">TECH</span></span>
+                    </a>
+                    <p class="footer-brand-desc">Ingeniería tecnológica multidisciplinaria. Software a medida, IA soberana e ingeniería electrónica.</p>
+                </div>
+                <div class="footer-links-col">
+                    <h5>Navegación</h5>
+                    <a href="index.html">Inicio</a>
+                    <a href="servicios.html">Servicios</a>
+                    <a href="avrora-one.html">AVRORA ONE</a>
+                    <a href="index.html#precios">Precios</a>
+                </div>
+                <div class="footer-links-col">
+                    <h5>Contacto Directo</h5>
+                    <a href="https://wa.me/573004002881" target="_blank" rel="noopener">WhatsApp · +57 300 400 2881</a>
+                    <a href="mailto:avroraonetech@gmail.com">avroraonetech@gmail.com</a>
+                    <a id="footer-privacy-link" class="form-legal-link" role="button">Habeas Data</a>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; <span id="footer-year"></span> Avrora Soluciones Tecnológicas. Todos los derechos reservados.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- ─── Modal Legal (Habeas Data) ─── -->
+    <div id="privacy-modal" class="modal-overlay" aria-hidden="true">
+        <div class="modal-card">
+            <div class="modal-header">
+                <h3 class="modal-title">Política de Tratamiento de Datos Personales</h3>
+                <button class="modal-close" id="close-privacy-modal" aria-label="Cerrar">&times;</button>
+            </div>
+            <div class="modal-body">
+                <h4>Cumplimiento Ley 1581 de 2012 — Colombia</h4>
+                <p>En <strong>Avrora Soluciones Tecnológicas (Avrora Tech)</strong>, garantizamos la confidencialidad, seguridad y protección de los datos personales suministrados por nuestros usuarios y clientes a través de este portal.</p>
+                <h4>1. Finalidad de la Recolección</h4>
+                <p>Los datos solicitados a través del formulario de contacto serán utilizados exclusivamente para atender solicitudes de cotización, contacto comercial, evaluación técnica de proyectos y seguimiento de propuestas solicitadas por el titular.</p>
+                <h4>2. Derechos del Titular</h4>
+                <p>De conformidad con la Ley 1581 de 2012, el usuario tiene derecho a conocer, actualizar, rectificar y solicitar la supresión de sus datos personales en cualquier momento escribiendo a: <strong>avroraonetech@gmail.com</strong>.</p>
+                <h4>3. No Transferencia a Terceros</h4>
+                <p>Avrora Tech no vende, comercializa ni transfiere datos personales a terceros bajo ninguna circunstancia sin autorización previa del titular.</p>
+            </div>
+        </div>
+    </div>
+
+    <!-- ─── Widgets Flotantes ─── -->
+    <div class="floating-widgets">
+        <button id="scroll-top" class="scroll-top-btn" aria-label="Volver arriba" title="Volver arriba">↑</button>
+        <a href="https://wa.me/573004002881?text=Hola%20Avrora%20Tech,%20quiero%20conocer%20más%20sobre%20AVRORA%20ONE"
+            target="_blank" rel="noopener" class="floating-wa-btn" aria-label="Contacto por WhatsApp Directo" data-track="avrora_floating_wa_click">
+            <span class="wa-pulse-dot" aria-hidden="true"></span>
+            <svg class="floating-wa-icon" viewBox="0 0 24 24"><path d="M.057 24l1.687-6.163c-1.041-1.804-1.588-3.849-1.587-5.946.003-6.556 5.338-11.891 11.893-11.891 3.181.001 6.167 1.24 8.413 3.488 2.245 2.248 3.481 5.236 3.48 8.414-.003 6.557-5.338 11.892-11.893 11.892-1.99-.001-3.951-.5-5.688-1.448l-6.705 1.754zm6.597-3.807c1.676.995 3.276 1.591 5.392 1.592 5.448 0 9.886-4.434 9.889-9.885.002-5.462-4.415-9.89-9.881-9.892-5.452 0-9.887 4.434-9.889 9.884-.001 2.225.651 3.891 1.746 5.634l-.999 3.648 3.742-.981zm11.387-5.464c-.074-.124-.272-.198-.57-.347-.297-.149-1.758-.868-2.031-.967-.272-.099-.47-.149-.669.149-.198.297-.768.967-.941 1.165-.173.198-.347.223-.644.074-.297-.149-1.255-.462-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.297-.347.446-.521.151-.172.2-.296.3-.495.099-.198.05-.372-.025-.521-.075-.148-.669-1.611-.916-2.206-.242-.579-.487-.501-.669-.51l-.57-.01c-.198 0-.52.074-.792.372s-1.04 1.016-1.04 2.479 1.065 2.876 1.213 3.074c.149.198 2.095 3.2 5.076 4.487.709.306 1.263.489 1.694.626.712.226 1.36.194 1.872.118.571-.085 1.758-.719 2.006-1.413.248-.695.248-1.29.173-1.414z"/></svg>
+            <span>Consultar con Ingeniería</span>
+        </a>
+    </div>
+
+    <script src="js/script.js"></script>
+</body>
+</html>

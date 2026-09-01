@@ -245,191 +245,141 @@
 
                 <!-- Texto -->
                 <div class="hero-content">
-                    <div class="badge reveal">⚡ INGENIERÍA COLOMBIANA · RESPUESTA EN &lt; 24H</div>
+                    <div class="badge reveal">INGENIERÍA APLICADA · RESPUESTA EN &lt; 24H</div>
                     <h1 class="hero-title reveal">
                         Desarrollamos <span class="gradient-text">Software a Medida</span>, <span class="gradient-text">Inteligencia Artificial</span> y <span class="gradient-text">Hardware IoT</span> para Empresas
                     </h1>
                     <p class="hero-subtitle reveal" style="margin-bottom: var(--space-md); color: var(--text-secondary); line-height: 1.6;">
-                        Automatizamos procesos críticos, digitalizamos operaciones y construimos soluciones tecnológicas robustas. Código 100% de tu propiedad, sin dependencias costosas ni sorpresas.
+                        Automatizamos procesos críticos, digitalizamos operaciones y construimos soluciones tecnológicas robustas y sostenibles, sin dependencias costosas ni sorpresas.
                     </p>
                     <div class="hero-cta reveal">
                         <a href="https://wa.me/573004002881?text=Hola%20Avrora%20Tech,%20quiero%20una%20evaluación%20gratuita%20de%20mi%20proyecto"
                             target="_blank" rel="noopener" class="btn btn-primary" data-track="hero_cta_evaluacion">Solicitar Evaluación Gratuita →</a>
-                        <a href="#project-estimator" class="btn btn-secondary" data-track="hero_cta_estimator">Calcular Presupuesto ⚡</a>
+                        <a href="#project-estimator" class="btn btn-secondary" data-track="hero_cta_estimator">Calcular Presupuesto</a>
                     </div>
 
                     <!-- Barra de Confianza (Trust Signals) -->
                     <div class="hero-trust-bar reveal">
                         <div class="trust-item">
-                            <span class="trust-icon">✓</span>
+                            <span class="trust-icon">
+                                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"></polyline></svg>
+                            </span>
                             <span>Cotización en &lt; 24 horas</span>
                         </div>
                         <div class="trust-item">
-                            <span class="trust-icon">🔒</span>
-                            <span>Código 100% tuyo</span>
+                            <span class="trust-icon">
+                                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"></path></svg>
+                            </span>
+                            <span>Soberanía técnica (Sin ataduras)</span>
                         </div>
                         <div class="trust-item">
-                            <span class="trust-icon">🤝</span>
-                            <span>NDA de Confidencialidad</span>
+                            <span class="trust-icon">
+                                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path><polyline points="14 2 14 8 20 8"></polyline><line x1="16" y1="13" x2="8" y2="13"></line><line x1="16" y1="17" x2="8" y2="17"></line></svg>
+                            </span>
+                            <span>Acuerdos de Confidencialidad (NDA)</span>
                         </div>
                         <div class="trust-item">
-                            <span class="trust-icon">🇨🇴</span>
-                            <span>Ingenieros en Colombia</span>
+                            <span class="trust-icon">
+                                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"></circle><polyline points="12 6 12 12 14 14"></polyline></svg>
+                            </span>
+                            <span>Ingeniería directa</span>
                         </div>
                     </div>
                 </div>
 
-                <!-- ─── Hero SVG — ecosistema orbital con glow ─── -->
+                <!-- ─── Hero SVG — Diagrama Técnico de Arquitectura e Ingeniería ─── -->
                 <div class="hero-visual reveal" aria-hidden="true">
-                    <svg viewBox="0 0 440 400" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <svg viewBox="0 0 460 420" fill="none" xmlns="http://www.w3.org/2000/svg" class="blueprint-svg">
                         <defs>
-                            <!-- Glow suave para nodos satélite -->
-                            <filter id="glow-soft" x="-50%" y="-50%" width="200%" height="200%">
-                                <feGaussianBlur stdDeviation="4" result="blur" />
+                            <!-- Filtros de renderizado de alta precisión -->
+                            <filter id="bp-glow" x="-30%" y="-30%" width="160%" height="160%">
+                                <feGaussianBlur stdDeviation="3.5" result="blur" />
                                 <feMerge>
                                     <feMergeNode in="blur" />
                                     <feMergeNode in="SourceGraphic" />
                                 </feMerge>
                             </filter>
-                            <!-- Glow fuerte para el centro -->
-                            <filter id="glow-strong" x="-80%" y="-80%" width="260%" height="260%">
-                                <feGaussianBlur stdDeviation="9" result="blur" />
-                                <feMerge>
-                                    <feMergeNode in="blur" />
-                                    <feMergeNode in="SourceGraphic" />
-                                </feMerge>
-                            </filter>
-                            <!-- Gradiente cyan→violeta para líneas -->
-                            <linearGradient id="lg-cv" x1="0%" y1="0%" x2="100%" y2="100%">
-                                <stop offset="0%" stop-color="hsl(185,100%,50%)" stop-opacity="0.85" />
-                                <stop offset="100%" stop-color="hsl(265,80%,55%)" stop-opacity="0.5" />
+                            <linearGradient id="bp-cyan-purple" x1="0%" y1="0%" x2="100%" y2="100%">
+                                <stop offset="0%" stop-color="var(--accent-cyan)" stop-opacity="0.9" />
+                                <stop offset="100%" stop-color="var(--accent-purple)" stop-opacity="0.8" />
                             </linearGradient>
-                            <!-- Gradiente radial para el halo central -->
-                            <radialGradient id="rg-center" cx="50%" cy="50%" r="50%">
-                                <stop offset="0%" stop-color="hsl(185,100%,50%)" stop-opacity="0.22" />
-                                <stop offset="60%" stop-color="hsl(185,100%,50%)" stop-opacity="0.06" />
-                                <stop offset="100%" stop-color="hsl(185,100%,50%)" stop-opacity="0" />
-                            </radialGradient>
-                            <!-- Gradiente radial nodo satélite -->
-                            <radialGradient id="rg-node" cx="50%" cy="50%" r="50%">
-                                <stop offset="0%" stop-color="hsl(185,100%,50%)" stop-opacity="0.16" />
-                                <stop offset="100%" stop-color="hsl(185,100%,50%)" stop-opacity="0" />
-                            </radialGradient>
-                            <!-- Gradiente del núcleo central -->
-                            <radialGradient id="rg-core" cx="35%" cy="30%" r="70%">
-                                <stop offset="0%" stop-color="hsl(185,100%,50%)" stop-opacity="0.30" />
-                                <stop offset="55%" stop-color="hsl(200,90%,45%)" stop-opacity="0.12" />
-                                <stop offset="100%" stop-color="hsl(265,80%,55%)" stop-opacity="0.06" />
+                            <radialGradient id="bp-center-grad" cx="50%" cy="50%" r="50%">
+                                <stop offset="0%" stop-color="var(--accent-cyan)" stop-opacity="0.16" />
+                                <stop offset="70%" stop-color="var(--accent-purple)" stop-opacity="0.04" />
+                                <stop offset="100%" stop-color="transparent" />
                             </radialGradient>
                         </defs>
 
-                        <!-- ══ Halo de fondo ══ -->
-                        <circle cx="220" cy="200" r="188" fill="url(#rg-center)" opacity="0.55" />
+                        <!-- Retícula técnica de fondo -->
+                        <g opacity="0.35" stroke="var(--glass-border)">
+                            <line x1="40" y1="210" x2="420" y2="210" stroke-width="0.8" stroke-dasharray="3 6" />
+                            <line x1="230" y1="30" x2="230" y2="390" stroke-width="0.8" stroke-dasharray="3 6" />
+                            <circle cx="230" cy="210" r="170" stroke-width="0.8" stroke-dasharray="4 8" fill="none" />
+                            <circle cx="230" cy="210" r="115" stroke-width="0.8" fill="none" />
+                        </g>
 
-                        <!-- ══ Anillos orbitales ══ -->
-                        <circle cx="220" cy="200" r="158" stroke="hsla(185,100%,50%,0.10)" stroke-width="1"
-                            stroke-dasharray="2 6" fill="none"
-                            style="animation: orbitDashA 26s linear infinite;" />
-                        <circle cx="220" cy="200" r="116" stroke="hsla(265,80%,55%,0.12)" stroke-width="1"
-                            stroke-dasharray="1.5 5" fill="none"
-                            style="animation: orbitDashB 16s linear infinite reverse;" />
+                        <!-- Halo de núcleo -->
+                        <circle cx="230" cy="210" r="85" fill="url(#bp-center-grad)" />
 
-                        <!-- ══ Líneas de conexión centro → nodos ══ -->
-                        <line x1="220" y1="200" x2="220" y2="60" stroke="url(#lg-cv)" stroke-width="1.2"
-                            opacity="0.55" class="orbit-line" />
-                        <line x1="220" y1="200" x2="353" y2="157" stroke="url(#lg-cv)" stroke-width="1.2"
-                            opacity="0.5" class="orbit-line" />
-                        <line x1="220" y1="200" x2="302" y2="313" stroke="url(#lg-cv)" stroke-width="1.2"
-                            opacity="0.45" class="orbit-line" />
-                        <line x1="220" y1="200" x2="138" y2="313" stroke="url(#lg-cv)" stroke-width="1.2"
-                            opacity="0.45" class="orbit-line" />
-                        <line x1="220" y1="200" x2="87" y2="157" stroke="url(#lg-cv)" stroke-width="1.2"
-                            opacity="0.5" class="orbit-line" />
+                        <!-- Bus de interconexión (Líneas de bus ortogonales y diagonales) -->
+                        <g stroke="var(--accent-cyan)" stroke-width="1.2" opacity="0.65">
+                            <line x1="230" y1="210" x2="100" y2="90" stroke-dasharray="4 4" class="orbit-line" />
+                            <line x1="230" y1="210" x2="360" y2="90" stroke-dasharray="4 4" class="orbit-line" />
+                            <line x1="230" y1="210" x2="360" y2="330" stroke-dasharray="4 4" class="orbit-line" />
+                            <line x1="230" y1="210" x2="100" y2="330" stroke-dasharray="4 4" class="orbit-line" />
+                        </g>
 
-                        <!-- ══ Pentágono perimetral ══ -->
-                        <polyline points="220,60 353,157 302,313 138,313 87,157 220,60"
-                            stroke="hsla(185,100%,50%,0.14)" stroke-width="1" fill="none" />
+                        <!-- Marco perimetral del sistema -->
+                        <polygon points="100,90 360,90 360,330 100,330" fill="none" stroke="var(--glass-border-hover)" stroke-width="1" stroke-dasharray="2 6" />
 
-                        <!-- ══ NODO CENTRAL ══ -->
-                        <circle cx="220" cy="200" r="62" fill="url(#rg-center)" />
-                        <circle cx="220" cy="200" r="50" stroke="hsl(185,100%,50%)" stroke-width="1.5"
-                            stroke-opacity="0.3" fill="none" filter="url(#glow-soft)" />
-                        <circle cx="220" cy="200" r="42" fill="url(#rg-core)" stroke="hsl(185,100%,50%)"
-                            stroke-width="2" filter="url(#glow-strong)" class="node-pulse" />
-                        <text x="220" y="196" text-anchor="middle" fill="white" font-size="13"
-                            font-family="Outfit,sans-serif" font-weight="700" letter-spacing="2"
-                            opacity="0.95">AVRORA</text>
-                        <text x="220" y="214" text-anchor="middle" fill="hsl(185,100%,50%)" font-size="8.5"
-                            font-family="Outfit,sans-serif" font-weight="600" letter-spacing="4"
-                            opacity="0.9">TECH</text>
+                        <!-- NODO CENTRAL: Core Arquitectónico -->
+                        <rect x="175" y="165" width="110" height="90" rx="10" fill="var(--bg-elevated)" stroke="url(#bp-cyan-purple)" stroke-width="1.6" filter="url(#bp-glow)" />
+                        <rect x="183" y="173" width="94" height="74" rx="6" fill="var(--glass-bg)" stroke="var(--glass-border)" stroke-width="1" />
+                        <text x="230" y="202" text-anchor="middle" fill="var(--text-primary)" font-family="Outfit, sans-serif" font-size="12" font-weight="800" letter-spacing="2">AVRORA</text>
+                        <text x="230" y="218" text-anchor="middle" fill="var(--accent-cyan)" font-family="Inter, sans-serif" font-size="8.5" font-weight="700" letter-spacing="1.5">CORE SYSTEM</text>
+                        <circle cx="230" cy="233" r="3" fill="var(--status-success)" />
 
-                        <!-- ══ NODO 1 — Web & Apps (top: 220,60) ══ -->
-                        <circle cx="220" cy="60" r="36" fill="url(#rg-node)" />
-                        <circle cx="220" cy="60" r="27" fill="hsla(185,100%,50%,0.07)" stroke="hsl(185,100%,50%)"
-                            stroke-width="1.2" stroke-opacity="0.45" filter="url(#glow-soft)"
-                            class="node-pulse-2" />
-                        <text x="220" y="56" text-anchor="middle" fill="hsl(185,100%,50%)" font-size="9"
-                            font-family="Inter,sans-serif" font-weight="600">Web &amp;</text>
-                        <text x="220" y="68" text-anchor="middle" fill="hsla(185,100%,50%,0.75)" font-size="8"
-                            font-family="Inter,sans-serif">Apps</text>
+                        <!-- NODO 1 (Superior Izquierda): Software Core -->
+                        <g class="node-pulse">
+                            <rect x="40" y="60" width="120" height="60" rx="8" fill="var(--bg-elevated)" stroke="var(--accent-cyan)" stroke-width="1.2" />
+                            <circle cx="60" cy="90" r="10" fill="hsla(var(--hue-cyan), 100%, 50%, 0.1)" stroke="var(--accent-cyan)" stroke-width="1" />
+                            <path d="M56 87l3 3-3 3M61 93h4" stroke="var(--accent-cyan)" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round" />
+                            <text x="80" y="86" fill="var(--text-primary)" font-family="Outfit, sans-serif" font-size="10" font-weight="700">Software &amp; Web</text>
+                            <text x="80" y="100" fill="var(--text-secondary)" font-family="Inter, sans-serif" font-size="7.5">APIs, DB &amp; UI</text>
+                        </g>
 
-                        <!-- ══ NODO 2 — IA & Datos (top-right: 353,157) ══ -->
-                        <circle cx="353" cy="157" r="36" fill="url(#rg-node)" />
-                        <circle cx="353" cy="157" r="27" fill="hsla(265,80%,55%,0.08)" stroke="hsl(265,80%,55%)"
-                            stroke-width="1.2" stroke-opacity="0.5" filter="url(#glow-soft)"
-                            class="node-pulse-3" />
-                        <text x="353" y="153" text-anchor="middle" fill="hsl(265,80%,55%)" font-size="9"
-                            font-family="Inter,sans-serif" font-weight="600">IA &amp;</text>
-                        <text x="353" y="165" text-anchor="middle" fill="hsla(265,80%,55%,0.75)" font-size="8"
-                            font-family="Inter,sans-serif">Datos</text>
+                        <!-- NODO 2 (Superior Derecha): Inteligencia Artificial -->
+                        <g class="node-pulse-2">
+                            <rect x="300" y="60" width="120" height="60" rx="8" fill="var(--bg-elevated)" stroke="var(--accent-purple)" stroke-width="1.2" />
+                            <circle cx="320" cy="90" r="10" fill="hsla(var(--hue-purple), 80%, 55%, 0.1)" stroke="var(--accent-purple)" stroke-width="1" />
+                            <path d="M317 87a3 3 0 1 0 6 0 3 3 0 0 0-6 0M320 90v4" stroke="var(--accent-purple)" stroke-width="1.2" stroke-linecap="round" />
+                            <text x="338" y="86" fill="var(--text-primary)" font-family="Outfit, sans-serif" font-size="10" font-weight="700">IA &amp; Agentes</text>
+                            <text x="338" y="100" fill="var(--text-secondary)" font-family="Inter, sans-serif" font-size="7.5">LLMs &amp; OCR Local</text>
+                        </g>
 
-                        <!-- ══ NODO 3 — IoT & Hardware (bottom-right: 302,313) ══ -->
-                        <circle cx="302" cy="313" r="36" fill="url(#rg-node)" />
-                        <circle cx="302" cy="313" r="27" fill="hsla(185,100%,50%,0.07)" stroke="hsl(185,100%,50%)"
-                            stroke-width="1.2" stroke-opacity="0.4" filter="url(#glow-soft)"
-                            class="node-pulse" />
-                        <text x="302" y="309" text-anchor="middle" fill="hsl(185,100%,50%)" font-size="9"
-                            font-family="Inter,sans-serif" font-weight="600">IoT &amp;</text>
-                        <text x="302" y="321" text-anchor="middle" fill="hsla(185,100%,50%,0.75)" font-size="8"
-                            font-family="Inter,sans-serif">Hardware</text>
+                        <!-- NODO 3 (Inferior Derecha): Hardware & IoT -->
+                        <g class="node-pulse-3">
+                            <rect x="300" y="300" width="120" height="60" rx="8" fill="var(--bg-elevated)" stroke="var(--accent-cyan)" stroke-width="1.2" />
+                            <circle cx="320" cy="330" r="10" fill="hsla(var(--hue-cyan), 100%, 50%, 0.1)" stroke="var(--accent-cyan)" stroke-width="1" />
+                            <path d="M316 327h8v6h-8zM320 324v3M320 333v3" stroke="var(--accent-cyan)" stroke-width="1.2" stroke-linecap="round" />
+                            <text x="338" y="326" fill="var(--text-primary)" font-family="Outfit, sans-serif" font-size="10" font-weight="700">IoT &amp; Hardware</text>
+                            <text x="338" y="340" fill="var(--text-secondary)" font-family="Inter, sans-serif" font-size="7.5">ESP32 / SCADA</text>
+                        </g>
 
-                        <!-- ══ NODO 4 — Automatización (bottom-left: 138,313) ══ -->
-                        <circle cx="138" cy="313" r="36" fill="url(#rg-node)" />
-                        <circle cx="138" cy="313" r="27" fill="hsla(185,100%,50%,0.07)" stroke="hsl(185,100%,50%)"
-                            stroke-width="1.2" stroke-opacity="0.4" filter="url(#glow-soft)"
-                            class="node-pulse-2" />
-                        <text x="138" y="309" text-anchor="middle" fill="hsl(185,100%,50%)" font-size="9"
-                            font-family="Inter,sans-serif" font-weight="600">Automa-</text>
-                        <text x="138" y="321" text-anchor="middle" fill="hsla(185,100%,50%,0.75)" font-size="8"
-                            font-family="Inter,sans-serif">tización</text>
+                        <!-- NODO 4 (Inferior Izquierda): Automatización RPA -->
+                        <g class="node-pulse">
+                            <rect x="40" y="300" width="120" height="60" rx="8" fill="var(--bg-elevated)" stroke="var(--accent-purple)" stroke-width="1.2" />
+                            <circle cx="60" cy="330" r="10" fill="hsla(var(--hue-purple), 80%, 55%, 0.1)" stroke="var(--accent-purple)" stroke-width="1" />
+                            <path d="M57 330l3-3 3 3M60 327v6" stroke="var(--accent-purple)" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round" />
+                            <text x="78" y="326" fill="var(--text-primary)" font-family="Outfit, sans-serif" font-size="10" font-weight="700">Automatización</text>
+                            <text x="78" y="340" fill="var(--text-secondary)" font-family="Inter, sans-serif" font-size="7.5">Pipelines &amp; RPA</text>
+                        </g>
 
-                        <!-- ══ NODO 5 — Producto (top-left: 87,157) ══ -->
-                        <circle cx="87" cy="157" r="36" fill="url(#rg-node)" />
-                        <circle cx="87" cy="157" r="27" fill="hsla(265,80%,55%,0.06)" stroke="hsl(265,80%,55%)"
-                            stroke-width="1.2" stroke-opacity="0.45" filter="url(#glow-soft)"
-                            class="node-pulse-3" />
-                        <text x="87" y="153" text-anchor="middle" fill="hsl(265,80%,55%)" font-size="9"
-                            font-family="Inter,sans-serif" font-weight="600">Producto</text>
-                        <text x="87" y="165" text-anchor="middle" fill="hsla(265,80%,55%,0.75)" font-size="8"
-                            font-family="Inter,sans-serif">Digital</text>
-
-                        <!-- Puntos decorativos en intersecciones -->
-                        <circle cx="220" cy="60" r="3" fill="hsl(185,100%,50%)" opacity="0.7"
-                            filter="url(#glow-soft)" />
-                        <circle cx="353" cy="157" r="3" fill="hsl(265,80%,55%)" opacity="0.7"
-                            filter="url(#glow-soft)" />
-                        <circle cx="302" cy="313" r="3" fill="hsl(185,100%,50%)" opacity="0.7"
-                            filter="url(#glow-soft)" />
-                        <circle cx="138" cy="313" r="3" fill="hsl(185,100%,50%)" opacity="0.7"
-                            filter="url(#glow-soft)" />
-                        <circle cx="87" cy="157" r="3" fill="hsl(265,80%,55%)" opacity="0.7"
-                            filter="url(#glow-soft)" />
-                    </svg>
-                </div>
-            </div>
-        </section>
-
-        <!-- ─── Stats / Métricas ─── -->
+                        <!-- Indicadores de estado de telemetría en esquinas -->
+                        <text x="40" y="45" fill="var(--text-tertiary)" font-family="monospace" font-size="8" letter-spacing="1">[STATUS: OPTIMAL]</text>
+                        <text x="340" y="45" fill="var(--text-tertiary)" font-family="monospace" font-size="8" letter-spacing="1">FREQ: 240 MHz</text>
+                        <text x="40" y="385" fill="var(--text-tertiary)" font-family="monospace" font-size="8" letter-spacing="1">4.71°N / 74.07°W</text>
+                        <text x="330" y="385" fill="var(--text-tertiary)" font-family="monospace" font-size="8" lett        <!-- ─── Stats / Métricas ─── -->
         <section class="stats-section" aria-label="Métricas clave">
             <div class="container">
                 <div class="stats-grid">
@@ -439,7 +389,7 @@
                     </div>
                     <div class="stat-item reveal">
                         <div class="stat-number" data-target="6" data-suffix="">6</div>
-                        <div class="stat-label">Etapas de proceso claro</div>
+                        <div class="stat-label">Etapas de proceso</div>
                     </div>
                     <div class="stat-item reveal">
                         <div class="stat-number" data-target="24" data-suffix="h">24h</div>
@@ -475,9 +425,9 @@
                         <p>Plataformas y aplicaciones web para presencia digital, gestión interna y operaciones empresariales.</p>
                         <ul class="solution-list">
                             <li>Sitios corporativos y landing pages</li>
-                            <li>Portales y sistemas web</li>
-                            <li>Dashboards de gestión</li>
-                            <li>Mantenimiento mensual</li>
+                            <li>Portales y sistemas web a medida</li>
+                            <li>Dashboards y paneles de control</li>
+                            <li>Asesoría y mantenimiento continuo</li>
                         </ul>
                     </article>
                     <article class="solution-card reveal">
@@ -491,9 +441,9 @@
                         <p>Digitalización de procesos mediante software e inteligencia artificial para eliminar el trabajo manual repetitivo.</p>
                         <ul class="solution-list">
                             <li>Automatización documental y OCR</li>
-                            <li>Asistentes con IA (RAG + LLM)</li>
-                            <li>Bots WhatsApp / Telegram</li>
-                            <li>Integraciones entre sistemas</li>
+                            <li>Asistentes con IA y agentes locales</li>
+                            <li>Bots WhatsApp y canales omnicanal</li>
+                            <li>Integraciones entre sistemas vía API</li>
                         </ul>
                     </article>
                     <article class="solution-card reveal">
@@ -515,9 +465,9 @@
                         <h3>Ingeniería Electrónica</h3>
                         <p>Hardware y firmware para sistemas embebidos e IoT, con integración efectiva entre dispositivos y software.</p>
                         <ul class="solution-list">
-                            <li>Firmware ESP32 / STM32 / Arduino</li>
+                            <li>Firmware ESP32 / STM32 / ARM</li>
                             <li>Sensores y monitoreo remoto</li>
-                            <li>Paneles SCADA web</li>
+                            <li>Paneles SCADA y telemetría web</li>
                             <li>Integración hardware-software</li>
                         </ul>
                     </article>
@@ -532,9 +482,9 @@
                         <h3>Desarrollo de Producto</h3>
                         <p>Transformamos una idea en un producto tecnológico completo, integrando todas las disciplinas de ingeniería.</p>
                         <ul class="solution-list">
-                            <li>Prototipado integral</li>
-                            <li>Equipos con sensores y web</li>
-                            <li>Sistemas de monitoreo completo</li>
+                            <li>Prototipado integral funcional</li>
+                            <li>Equipos con sensórica y nube</li>
+                            <li>Sistemas de telemetría completa</li>
                             <li>Producto de principio a fin</li>
                         </ul>
                     </article>
@@ -552,49 +502,80 @@
                             En desarrollo activo
                         </span>
                         <h3 class="teaser-title">AVRORA ONE — Agente de IA local</h3>
-                        <p class="teaser-desc">Plataforma cognitiva modular para Windows: voz bidireccional, visión, memoria persistente y más de 22 herramientas nativas. Operación completamente local, sin dependencias en la nube. Disponibilidad próxima.</p>
+                        <p class="teaser-desc">Plataforma cognitiva modular para Windows: inferencia local con llama.cpp, embeddings semánticos ONNX, visión en CPU, memoria persistente SQLite WAL y más de 22 herramientas nativas. Operación 100% offline y privada.</p>
                     </div>
-                    <div class="teaser-right">
-                        <a href="https://wa.me/573004002881?text=Hola%20Avrora,%20quiero%20que%20me%20notifiquen%20cuando%20AVRORA%20ONE%20esté%20disponible"
+                    <div class="teaser-right" style="display:flex; gap:10px; flex-wrap:wrap;">
+                        <a href="avrora-one.html" class="btn btn-primary" data-track="teaser_avrora_one_landing">
+                            Conocer arquitectura y avances →
+                        </a>
+                        <a href="https://wa.me/573004002881?text=Hola%20Avrora,%20quiero%20más%20información%20sobre%20AVRORA%20ONE"
                             target="_blank" rel="noopener" class="btn btn-secondary" data-track="teaser_avrora_one_click">
-                            Notifícame cuando esté listo →
+                            Notifícame al lanzar
                         </a>
                     </div>
                 </div>
             </div>
         </section>
 
-        <!-- ─── Sectores e Industrias Atendidas (Google Ads Landing Relevance) ─── -->
+        <!-- ─── Sectores e Industrias Atendidas (Casos de Aplicación) ─── -->
         <section id="industrias" class="section">
             <div class="container">
                 <div class="section-header reveal">
                     <span class="section-label">Casos de Aplicación</span>
                     <h2 class="section-title">Soluciones diseñadas para su <span class="highlight">sector</span></h2>
-                    <p class="section-desc">Entendemos los cuellos de botella reales de cada tipo de negocio. Desarrollamos herramientas que generan retorno de inversión inmediato.</p>
+                    <p class="section-desc">Entendemos los cuellos de botella operativos reales. Desarrollamos herramientas que optimizan tiempos y generan retorno de inversión inmediato.</p>
                 </div>
                 <div class="industries-grid stagger">
+                    <!-- Tarjeta 1: Contabilidad & Finanzas -->
                     <div class="industry-card reveal">
-                        <div class="industry-icon">🛒</div>
-                        <h3 class="industry-title">Comercio &amp; E-Commerce</h3>
-                        <p class="industry-desc">Tiendas online de alto rendimiento, catálogos interactivos, pasarelas de pago y sincronización de inventarios con ERPs.</p>
-                        <span class="industry-tag">Web &amp; Automatización</span>
+                        <div class="industry-icon">
+                            <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+                                <line x1="12" y1="1" x2="12" y2="23"></line>
+                                <path d="M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"></path>
+                            </svg>
+                        </div>
+                        <h3 class="industry-title">Contabilidad &amp; Finanzas</h3>
+                        <p class="industry-desc">Conciliación bancaria automatizada, extracción OCR de facturas y remisiones, y sincronización directa con software contable.</p>
+                        <span class="industry-tag">OCR + Conciliación RPA</span>
                     </div>
+
+                    <!-- Tarjeta 2: Call Centers & Atención -->
                     <div class="industry-card reveal">
-                        <div class="industry-icon">🚚</div>
-                        <h3 class="industry-title">Logística &amp; Operaciones</h3>
-                        <p class="industry-desc">Automatización de guías y remisiones con OCR, seguimiento de flotas en tiempo real y dashboards operativos para despachos.</p>
-                        <span class="industry-tag">OCR + IA + Dashboards</span>
-                    </div>
-                    <div class="industry-card reveal">
-                        <div class="industry-icon">🩺</div>
-                        <h3 class="industry-title">Salud &amp; Servicios B2B</h3>
-                        <p class="industry-desc">Agendamiento automatizado, bots de WhatsApp 24/7 para atención a usuarios y plataformas seguras de gestión de clientes.</p>
+                        <div class="industry-icon">
+                            <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+                                <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"></path>
+                            </svg>
+                        </div>
+                        <h3 class="industry-title">Atención &amp; Call Centers</h3>
+                        <p class="industry-desc">Agentes conversacionales inteligentes 24/7 en WhatsApp y Web, triaje automático de tickets y CRM omnicanal integrado.</p>
                         <span class="industry-tag">Bots WhatsApp + CRM</span>
                     </div>
+
+                    <!-- Tarjeta 3: Logística & Operaciones -->
                     <div class="industry-card reveal">
-                        <div class="industry-icon">🏭</div>
+                        <div class="industry-icon">
+                            <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+                                <rect x="1" y="3" width="15" height="13"></rect>
+                                <polygon points="16 8 20 8 23 11 23 16 16 16 16 8"></polygon>
+                                <circle cx="5.5" cy="18.5" r="2.5"></circle>
+                                <circle cx="18.5" cy="18.5" r="2.5"></circle>
+                            </svg>
+                        </div>
+                        <h3 class="industry-title">Logística &amp; Operaciones</h3>
+                        <p class="industry-desc">Monitoreo de inventarios en tiempo real, trazabilidad de despachos, digitalización de guías y reportes operativos automáticos.</p>
+                        <span class="industry-tag">Trazabilidad + Dashboards</span>
+                    </div>
+
+                    <!-- Tarjeta 4: Industria & Manufactura -->
+                    <div class="industry-card reveal">
+                        <div class="industry-icon">
+                            <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+                                <path d="M2 20h20"></path>
+                                <path d="M5 20V8l5 4V8l5 4V4h4v16"></path>
+                            </svg>
+                        </div>
                         <h3 class="industry-title">Industria &amp; Manufactura</h3>
-                        <p class="industry-desc">Monitoreo remoto de variables críticas (temperatura, energía, presión) mediante IoT, paneles SCADA web y telemetría.</p>
+                        <p class="industry-desc">Telemetría IoT, adquisición de datos de sensores, monitoreo remoto de energía y paneles SCADA web en tiempo real.</p>
                         <span class="industry-tag">IoT + Sensores + SCADA</span>
                     </div>
                 </div>
@@ -607,13 +588,15 @@
                 <div class="section-header reveal">
                     <span class="section-label">Inversión</span>
                     <h2 class="section-title">Precios <span class="highlight">transparentes</span></h2>
-                    <p class="section-desc">Publicamos rangos de inversión transparentes para que usted llegue a la conversación con contexto claro. El precio final se define en la propuesta técnica, previa al inicio del proyecto.</p>
+                    <p class="section-desc">Publicamos rangos de inversión de referencia. La cotización exacta se define en la propuesta técnica detallada previa al inicio del proyecto.</p>
                 </div>
                 <div class="pricing-grid stagger">
                     <div class="pricing-card reveal">
-                        <div class="pricing-icon">🌐</div>
+                        <div class="pricing-icon">
+                            <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"></circle><line x1="2" y1="12" x2="22" y2="12"></line><path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"></path></svg>
+                        </div>
                         <div class="pricing-name">Presencia Digital</div>
-                        <p class="pricing-desc">Sitios web profesionales para organizaciones que requieren una presencia digital sólida y funcional.</p>
+                        <p class="pricing-desc">Sitios web y landing pages profesionales orientados a velocidad, credibilidad y conversión comercial.</p>
                         <div class="pricing-price">
                             <span class="pricing-from">Desde</span>
                             <span class="pricing-amount">$600.000</span>
@@ -621,55 +604,59 @@
                         </div>
                         <ul class="pricing-list">
                             <li>Landing page de alta conversión</li>
-                            <li>Sitio corporativo completo desde $1.800.000</li>
-                            <li>Diseño responsive (móvil, tablet, desktop)</li>
-                            <li>SEO básico y Schema incluidos</li>
-                            <li>Mantenimiento mensual desde $150.000</li>
+                            <li>Arquitectura responsive optimizada</li>
+                            <li>SEO técnico y Schema.org estructurado</li>
+                            <li>Integración directa a WhatsApp y formularios</li>
+                            <li>Acompañamiento y garantía post-entrega</li>
                         </ul>
-                        <a href="https://wa.me/573004002881?text=Hola%20Avrora,%20me%20interesa%20una%20página%20web"
+                        <a href="https://wa.me/573004002881?text=Hola%20Avrora,%20me%20interesa%20una%20solución%20web"
                             target="_blank" rel="noopener" class="btn btn-secondary"
-                            data-track="pricing_web_click" style="width:100%;justify-content:center;">Consultar →</a>
+                            data-track="pricing_web_click" style="width:100%;justify-content:center;">Consultar disponibilidad →</a>
                     </div>
                     <div class="pricing-card pricing-card--featured reveal">
                         <div class="pricing-featured-badge">Más solicitado</div>
-                        <div class="pricing-icon">⚡</div>
+                        <div class="pricing-icon">
+                            <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2"></polygon></svg>
+                        </div>
                         <div class="pricing-name">Automatización Inteligente</div>
-                        <p class="pricing-desc">Inteligencia artificial, RPA y bots para digitalizar procesos documentales y eliminar el trabajo manual repetitivo.</p>
+                        <p class="pricing-desc">Digitalización de flujos operativos, agentes de inteligencia artificial y conectores entre sistemas.</p>
                         <div class="pricing-price">
                             <span class="pricing-from">Desde</span>
                             <span class="pricing-amount">$2.500.000</span>
                             <span class="pricing-period">COP</span>
                         </div>
                         <ul class="pricing-list">
-                            <li>Sesión de diagnóstico y descubrimiento</li>
-                            <li>Automatización documental con OCR</li>
-                            <li>Asistentes con IA integrados</li>
-                            <li>Bots WhatsApp / Telegram</li>
-                            <li>Integraciones entre sistemas vía API</li>
+                            <li>Sesión de diagnóstico y levantamiento técnico</li>
+                            <li>Extracción documental automática con OCR</li>
+                            <li>Asistentes y agentes con IA a medida</li>
+                            <li>Bots conversacionales de WhatsApp / Web</li>
+                            <li>Integración con bases de datos y APIs</li>
                         </ul>
                         <a href="https://wa.me/573004002881?text=Hola%20Avrora,%20me%20interesa%20automatizar%20procesos"
                             target="_blank" rel="noopener" class="btn btn-primary"
-                            data-track="pricing_ia_click" style="width:100%;justify-content:center;">Agendar sesión →</a>
+                            data-track="pricing_ia_click" style="width:100%;justify-content:center;">Agendar evaluación →</a>
                     </div>
                     <div class="pricing-card reveal">
-                        <div class="pricing-icon">🔌</div>
-                        <div class="pricing-name">Ingeniería Electrónica</div>
-                        <p class="pricing-desc">IoT, hardware embebido y control industrial. Cada proyecto es único — cotización personalizada.</p>
+                        <div class="pricing-icon">
+                            <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="4" y="4" width="16" height="16" rx="2"></rect><rect x="9" y="9" width="6" height="6"></rect><line x1="9" y1="2" x2="9" y2="4"></line><line x1="15" y1="2" x2="15" y2="4"></line><line x1="9" y1="20" x2="9" y2="22"></line><line x1="15" y1="20" x2="15" y2="22"></line><line x1="20" y1="9" x2="22" y2="9"></line><line x1="20" y1="14" x2="22" y2="14"></line><line x1="2" y1="9" x2="4" y2="9"></line><line x1="2" y1="14" x2="4" y2="14"></line></svg>
+                        </div>
+                        <div class="pricing-name">Ingeniería &amp; Hardware IoT</div>
+                        <p class="pricing-desc">Diseño embebido, firmware para microcontroladores, sensórica y paneles SCADA de telemetría industrial.</p>
                         <div class="pricing-price">
-                            <span class="pricing-from">Precio</span>
+                            <span class="pricing-from">Inversión</span>
                             <span class="pricing-amount">A medida</span>
                         </div>
                         <ul class="pricing-list">
-                            <li>Firmware ESP32 / STM32 / Arduino</li>
-                            <li>Sistemas de monitoreo y sensórica</li>
-                            <li>Control SCADA con interfaz web</li>
-                            <li>Integración hardware-software completa</li>
-                            <li>Evaluación técnica gratuita</li>
+                            <li>Firmware optimizado ESP32 / STM32 / ARM</li>
+                            <li>Adquisición y acondicionamiento de sensores</li>
+                            <li>Panel SCADA web en tiempo real</li>
+                            <li>Integración integral hardware-software</li>
+                            <li>Evaluación técnica preliminar sin costo</li>
                         </ul>
-                        <a href="https://wa.me/573004002881?text=Hola%20Avrora,%20tengo%20un%20proyecto%20de%20electrónica%20e%20IoT"
+                        <a href="https://wa.me/573004002881?text=Hola%20Avrora,%20tengo%20un%20proyecto%20de%20hardware%20e%20IoT"
                             target="_blank" rel="noopener" class="btn btn-secondary"
-                            data-track="pricing_hardware_click" style="width:100%;justify-content:center;">Consultar →</a>
-                        <p class="pricing-note">Propuesta técnica sin compromiso tras evaluación</p>
+                            data-track="pricing_hardware_click" style="width:100%;justify-content:center;">Consultar proyecto →</a>
+                        <p class="pricing-note">Propuesta técnica detallada tras sesión de requerimientos</p>
                     </div>
                 </div>
 
@@ -679,89 +666,91 @@
                         <div class="estimator-header">
                             <div class="badge" style="margin-bottom:8px;">Herramienta Interactiva</div>
                             <h3 class="estimator-title">Calculadora de Alcance y Cotización</h3>
-                            <p class="estimator-desc">Seleccione la base de su proyecto y los módulos adicionales para obtener una estimación transparente de la inversión.</p>
+                            <p class="estimator-desc">Seleccione la base de su proyecto y los módulos adicionales para obtener una estimación técnica preliminar.</p>
                         </div>
 
                         <div class="estimator-steps">
                             <!-- Paso 1: Tipo de Proyecto Base -->
                             <div>
-                                <div class="estimator-step-title"><span class="estimator-step-num">1</span> Seleccione
-                                    el tipo de solución base</div>
+                                <div class="estimator-step-title"><span class="estimator-step-num">1</span> Seleccione el tipo de solución base</div>
                                 <div class="estimator-grid">
                                     <div class="estimator-option is-selected" data-price="600000"
                                         data-name="Landing Page Corporativa">
-                                        <span class="estimator-option-icon">🌐</span>
+                                        <span class="estimator-option-icon">
+                                            <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"></circle><line x1="2" y1="12" x2="22" y2="12"></line><path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"></path></svg>
+                                        </span>
                                         <span class="estimator-option-name">Landing Page</span>
-                                        <span class="estimator-option-desc">Diseño moderno, responsive y alta
-                                            conversión.</span>
+                                        <span class="estimator-option-desc">Diseño moderno, responsive y alta conversión.</span>
                                         <span class="estimator-option-badge">Desde $600.000 COP</span>
                                     </div>
                                     <div class="estimator-option" data-price="1800000"
-                                        data-name="Sitio / Portal Web Completo">
-                                        <span class="estimator-option-icon">🖥️</span>
-                                        <span class="estimator-option-name">Sitio Web Completo</span>
-                                        <span class="estimator-option-desc">Multipágina, catálogo/servicios y SEO
-                                            avanzado.</span>
+                                        data-name="Portal / Sistema Web Completo">
+                                        <span class="estimator-option-icon">
+                                            <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="3" width="20" height="14" rx="2"></rect><line x1="8" y1="21" x2="16" y2="21"></line><line x1="12" y1="17" x2="12" y2="21"></line></svg>
+                                        </span>
+                                        <span class="estimator-option-name">Sistema Web Completo</span>
+                                        <span class="estimator-option-desc">Multipágina, catálogo/servicios y SEO estructurado.</span>
                                         <span class="estimator-option-badge">Desde $1.800.000 COP</span>
                                     </div>
                                     <div class="estimator-option" data-price="2500000"
-                                        data-name="Automatización e IA (RPA / Bots / OCR)">
-                                        <span class="estimator-option-icon">⚡</span>
+                                        data-name="Automatización e IA (RPA / OCR / Bots)">
+                                        <span class="estimator-option-icon">
+                                            <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2"></polygon></svg>
+                                        </span>
                                         <span class="estimator-option-name">Automatización / IA</span>
-                                        <span class="estimator-option-desc">Lectura OCR, bots WhatsApp y
-                                            conectores.</span>
+                                        <span class="estimator-option-desc">Lectura OCR, agentes conversacionales y conectores.</span>
                                         <span class="estimator-option-badge">Desde $2.500.000 COP</span>
                                     </div>
                                     <div class="estimator-option" data-price="0"
-                                        data-name="Ingeniería Electrónica / IoT / Producto">
-                                        <span class="estimator-option-icon">🔌</span>
+                                        data-name="Ingeniería Electrónica / IoT / Telemetría">
+                                        <span class="estimator-option-icon">
+                                            <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="4" y="4" width="16" height="16" rx="2"></rect><rect x="9" y="9" width="6" height="6"></rect><line x1="9" y1="2" x2="9" y2="4"></line><line x1="15" y1="2" x2="15" y2="4"></line><line x1="9" y1="20" x2="9" y2="22"></line><line x1="15" y1="20" x2="15" y2="22"></line></svg>
+                                        </span>
                                         <span class="estimator-option-name">Electrónica / IoT</span>
-                                        <span class="estimator-option-desc">Firmware, sensórica y panel web
-                                            SCADA.</span>
+                                        <span class="estimator-option-desc">Firmware, sensórica y panel web SCADA.</span>
                                         <span class="estimator-option-badge">A medida</span>
                                     </div>
                                 </div>
                             </div>
 
-                            <!-- Paso 2: Módulos Adicionales -->
+                            <!-- Paso 2: Módulos Adicionales (Genéricos y Empresariales) -->
                             <div>
-                                <div class="estimator-step-title"><span class="estimator-step-num">2</span> Agregue
-                                    módulos opcionales</div>
+                                <div class="estimator-step-title"><span class="estimator-step-num">2</span> Agregue módulos opcionales</div>
                                 <div class="estimator-addons-grid">
-                                    <label class="estimator-checkbox-card" data-price="400000"
-                                        data-name="Asistente IA (RAG / Documental)">
-                                        <input type="checkbox" name="addon-ai">
+                                    <label class="estimator-checkbox-card" data-price="350000"
+                                        data-name="Módulo de Autenticación y Roles">
+                                        <input type="checkbox" name="addon-auth">
                                         <span class="estimator-custom-check"></span>
                                         <div>
-                                            <strong
-                                                style="color:var(--text-primary); font-size:var(--text-xs); display:block;">Asistente
-                                                de IA Documental</strong>
-                                            <span style="font-size:0.7rem; color:var(--text-secondary);">Chat con sus
-                                                archivos PDF y manuales (+ $400.000 COP)</span>
+                                            <strong style="color:var(--text-primary); font-size:var(--text-xs); display:block;">Autenticación &amp; Roles de Usuario</strong>
+                                            <span style="font-size:0.7rem; color:var(--text-secondary);">Control de acceso seguro y permisos (+ $350.000 COP)</span>
                                         </div>
                                     </label>
-                                    <label class="estimator-checkbox-card" data-price="350000"
-                                        data-name="Integración WhatsApp Bot">
-                                        <input type="checkbox" name="addon-wa">
+                                    <label class="estimator-checkbox-card" data-price="400000"
+                                        data-name="Integración de Base de Datos y APIs">
+                                        <input type="checkbox" name="addon-api">
                                         <span class="estimator-custom-check"></span>
                                         <div>
-                                            <strong
-                                                style="color:var(--text-primary); font-size:var(--text-xs); display:block;">Bot
-                                                de WhatsApp Automático</strong>
-                                            <span style="font-size:0.7rem; color:var(--text-secondary);">Respuestas 24/7
-                                                y captura de leads (+ $350.000 COP)</span>
+                                            <strong style="color:var(--text-primary); font-size:var(--text-xs); display:block;">Integración con APIs / Base de Datos</strong>
+                                            <span style="font-size:0.7rem; color:var(--text-secondary);">Conexión con ERPs, CRMs o servicios existentes (+ $400.000 COP)</span>
                                         </div>
                                     </label>
                                     <label class="estimator-checkbox-card" data-price="300000"
-                                        data-name="Dashboard de Métricas SCADA / BI">
+                                        data-name="Panel de Analítica y Reportes">
                                         <input type="checkbox" name="addon-dash">
                                         <span class="estimator-custom-check"></span>
                                         <div>
-                                            <strong
-                                                style="color:var(--text-primary); font-size:var(--text-xs); display:block;">Dashboard
-                                                de Control / BI</strong>
-                                            <span style="font-size:0.7rem; color:var(--text-secondary);">Gráficas en
-                                                tiempo real y reportes (+ $300.000 COP)</span>
+                                            <strong style="color:var(--text-primary); font-size:var(--text-xs); display:block;">Panel de Analítica &amp; Exportación</strong>
+                                            <span style="font-size:0.7rem; color:var(--text-secondary);">Métricas en tiempo real y descarga PDF/Excel (+ $300.000 COP)</span>
+                                        </div>
+                                    </label>
+                                    <label class="estimator-checkbox-card" data-price="250000"
+                                        data-name="Sistema de Notificaciones Automatizadas">
+                                        <input type="checkbox" name="addon-notif">
+                                        <span class="estimator-custom-check"></span>
+                                        <div>
+                                            <strong style="color:var(--text-primary); font-size:var(--text-xs); display:block;">Notificaciones Automatizadas</strong>
+                                            <span style="font-size:0.7rem; color:var(--text-secondary);">Alertas automáticas vía Correo / WhatsApp (+ $250.000 COP)</span>
                                         </div>
                                     </label>
                                 </div>
@@ -773,8 +762,7 @@
                             <div class="estimator-result-info">
                                 <span class="estimator-result-label">Inversión Estimada:</span>
                                 <div class="estimator-result-price" id="estimator-total-price">$ 600.000 COP</div>
-                                <span class="estimator-result-time">⏱️ Entrega estimada: 5 a 15 días hábiles según
-                                    alcance</span>
+                                <span class="estimator-result-time">Entrega estimada: 5 a 15 días hábiles según alcance</span>
                             </div>
                             <a href="#" id="estimator-submit" target="_blank" rel="noopener" class="btn btn-primary"
                                 data-track="estimator_submit_click" style="gap:8px;">
@@ -801,22 +789,22 @@
                             <thead>
                                 <tr>
                                     <th>Criterio Técnico / Comercial</th>
-                                    <th class="col-avrora">Avrora Tech 🇨🇴</th>
+                                    <th class="col-avrora">Avrora Tech</th>
                                     <th>Agencias Tradicionales</th>
                                     <th>Freelancers Dispersos</th>
                                 </tr>
                             </thead>
                             <tbody>
                                 <tr>
-                                    <td><strong>Propiedad del Código</strong></td>
-                                    <td class="col-avrora"><span class="comparison-check">✓ 100% de tu empresa</span></td>
-                                    <td><span class="comparison-cross">✕ Cuotas mensuales o ataduras</span></td>
+                                    <td><strong>Arquitectura &amp; Soberanía</strong></td>
+                                    <td class="col-avrora"><span class="comparison-check">✓ Código limpio sin licencias cautivas</span></td>
+                                    <td><span class="comparison-cross">✕ Dependencia perpetua o CMS lentos</span></td>
                                     <td><span class="comparison-check">✓ En su mayoría</span></td>
                                 </tr>
                                 <tr>
-                                    <td><strong>Integración Hardware + Software</strong></td>
+                                    <td><strong>Integración Software + Hardware</strong></td>
                                     <td class="col-avrora"><span class="comparison-check">✓ Web, IA y electrónica en 1 equipo</span></td>
-                                    <td><span class="comparison-cross">✕ Solo páginas web básicas</span></td>
+                                    <td><span class="comparison-cross">✕ Solo páginas web estándar</span></td>
                                     <td><span class="comparison-cross">✕ Requiere múltiples perfiles</span></td>
                                 </tr>
                                 <tr>
@@ -827,13 +815,13 @@
                                 </tr>
                                 <tr>
                                     <td><strong>Acuerdo de Confidencialidad (NDA)</strong></td>
-                                    <td class="col-avrora"><span class="comparison-check">✓ Firmado previo a la evaluación</span></td>
+                                    <td class="col-avrora"><span class="comparison-check">✓ Firmado previo a la evaluación técnica</span></td>
                                     <td><span class="comparison-cross">✕ Ocasional</span></td>
                                     <td><span class="comparison-cross">✕ Rara vez</span></td>
                                 </tr>
                                 <tr>
-                                    <td><strong>Garantía Técnica y Soporte</strong></td>
-                                    <td class="col-avrora"><span class="comparison-check">✓ Periodo de garantía post-entrega</span></td>
+                                    <td><strong>Garantía Técnica y Acompañamiento</strong></td>
+                                    <td class="col-avrora"><span class="comparison-check">✓ Garantía post-entrega y soporte directo</span></td>
                                     <td><span class="comparison-cross">✕ Costos elevados de mantenimiento</span></td>
                                     <td><span class="comparison-cross">✕ Riesgo de desaparición</span></td>
                                 </tr>
@@ -842,48 +830,69 @@
                     </div>
                 </div>
 
-                <!-- Garantías de Ingeniería -->
+                <!-- Garantías de Ingeniería (Iconos vectoriales limpios) -->
                 <div class="guarantees-grid stagger">
                     <div class="guarantee-card reveal">
-                        <div class="guarantee-icon">🛡️</div>
-                        <h4 class="guarantee-title">Sin Ataduras</h4>
-                        <p class="guarantee-desc">Usted es dueño absoluto del código, las credenciales y la infraestructura desplegada.</p>
+                        <div class="guarantee-icon">
+                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"></path></svg>
+                        </div>
+                        <h4 class="guarantee-title">Soberanía Técnica</h4>
+                        <p class="guarantee-desc">Sistemas documentados, código mantenible y control absoluto de su infraestructura y despliegues.</p>
                     </div>
                     <div class="guarantee-card reveal">
-                        <div class="guarantee-icon">⚡</div>
+                        <div class="guarantee-icon">
+                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="22 12 18 12 15 21 9 3 6 12 2 12"></polyline></svg>
+                        </div>
                         <h4 class="guarantee-title">Entregas por Hitos</h4>
-                        <p class="guarantee-desc">Valide el funcionamiento real del software antes de realizar los pagos finales.</p>
+                        <p class="guarantee-desc">Validación funcional en cada etapa del desarrollo antes de realizar los desembolsos finales.</p>
                     </div>
                     <div class="guarantee-card reveal">
-                        <div class="guarantee-icon">🤝</div>
+                        <div class="guarantee-icon">
+                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path><polyline points="14 2 14 8 20 8"></polyline><line x1="16" y1="13" x2="8" y2="13"></line><line x1="16" y1="17" x2="8" y2="17"></line></svg>
+                        </div>
                         <h4 class="guarantee-title">NDA Garantizado</h4>
-                        <p class="guarantee-desc">Su modelo de negocio, datos y procesos están protegidos contractualmente.</p>
+                        <p class="guarantee-desc">Su modelo de negocio, datos confidenciales y procesos están protegidos contractualmente.</p>
                     </div>
                     <div class="guarantee-card reveal">
-                        <div class="guarantee-icon">🎯</div>
-                        <h4 class="guarantee-title">Ingeniería Real</h4>
-                        <p class="guarantee-desc">Soluciones construidas con arquitectura limpia y código optimizado para alto rendimiento.</p>
+                        <div class="guarantee-icon">
+                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"></circle><polyline points="12 6 12 12 14 14"></polyline></svg>
+                        </div>
+                        <h4 class="guarantee-title">Rigor de Ingeniería</h4>
+                        <p class="guarantee-desc">Soluciones construidas con arquitectura limpia, tipado estricto y código optimizado para alto rendimiento.</p>
                     </div>
                 </div>
             </div>
         </section>
 
-        <!-- ─── Nosotros (condensado) ─── -->
+        <!-- ─── Nosotros: Filosofía de Liberación Tecnológica ─── -->
         <section id="nosotros" class="about-section section">
             <div class="container">
-                <div class="badge reveal">Quiénes Somos</div>
-                <h2 class="section-title reveal">Ingeniería colombiana<br><span class="gradient-text">de vanguardia</span></h2>
-                <p class="section-desc reveal">No somos una agencia de publicidad. Somos un equipo de ingeniería multidisciplinaria que diseña soluciones reales para los desafíos operativos de empresas en Colombia y el mundo.</p>
-                <div class="grid cards-grid stagger">
+                <div class="section-header reveal">
+                    <span class="section-label">Quiénes Somos</span>
+                    <h2 class="section-title">Ingeniería enfocada en <span class="gradient-text">soberanía, velocidad y eficiencia</span></h2>
+                    <p class="section-desc">Diseñamos tecnología desde los fundamentos. Sin intermediarios inflados, sin dependencias innecesarias y con el rigor técnico que exige la industria moderna.</p>
+                </div>
+                <div class="grid cards-grid stagger" style="grid-template-columns: repeat(auto-fit, minmax(min(320px, 100%), 1fr));">
                     <div class="glass-card reveal">
-                        <div class="card-icon">🇨🇴</div>
-                        <h3>Para el mercado colombiano y global</h3>
-                        <p>Comprendemos el contexto y las necesidades de las empresas locales. Facilitamos el acceso a inteligencia artificial, automatización e ingeniería de vanguardia, con soporte cercano y directo de ingenieros.</p>
+                        <div class="card-icon">
+                            <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2"></polygon></svg>
+                        </div>
+                        <h3>Eficiencia en Arquitectura</h3>
+                        <p>Rechazamos el software sobrecargado y las capas redundantes. Construimos sistemas livianos que consumen la mínima cantidad de recursos de cómputo con máxima velocidad de ejecución.</p>
                     </div>
                     <div class="glass-card reveal">
-                        <div class="card-icon">⚡</div>
-                        <h3>Software + Hardware en un solo equipo</h3>
-                        <p>A diferencia de las agencias convencionales, integramos desarrollo web moderno con conocimiento especializado en IoT, microcontroladores y automatización. Un único proveedor responsable de toda la cadena.</p>
+                        <div class="card-icon">
+                            <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="11" width="18" height="11" rx="2" ry="2"></rect><path d="M7 11V7a5 5 0 0 1 10 0v4"></path></svg>
+                        </div>
+                        <h3>Privacidad &amp; Soberanía de Datos</h3>
+                        <p>Priorizamos arquitecturas que mantienen el control de la información en manos de su organización, fomentando inferencia local, bases de datos seguras y cero fuga de datos.</p>
+                    </div>
+                    <div class="glass-card reveal">
+                        <div class="card-icon">
+                            <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="4" y="4" width="16" height="16" rx="2"></rect><rect x="9" y="9" width="6" height="6"></rect><line x1="9" y1="2" x2="9" y2="4"></line><line x1="15" y1="2" x2="15" y2="4"></line><line x1="9" y1="20" x2="9" y2="22"></line><line x1="15" y1="20" x2="15" y2="22"></line></svg>
+                        </div>
+                        <h3>Sinergia Software + Hardware</h3>
+                        <p>Unimos el mundo digital con la ingeniería física. Desde circuitos y microcontroladores hasta servidores, APIs y modelos de inteligencia artificial en un solo proveedor integral.</p>
                     </div>
                 </div>
             </div>

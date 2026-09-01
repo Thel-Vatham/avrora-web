@@ -3345,34 +3345,110 @@ textarea.form-control {
     gap: 6px;
 }
 
-/* ─── Industries Grid ─── */
+/* ─── Industries Grid (4 Parallel Cards on Desktop) ─── */
 .industries-grid {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+    grid-template-columns: repeat(4, 1fr);
     gap: var(--space-md);
     margin-top: var(--space-lg);
+}
+
+@media (max-width: 1024px) {
+    .industries-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width: 600px) {
+    .industries-grid {
+        grid-template-columns: 1fr;
+    }
 }
 
 .industry-card {
     background: var(--glass-bg);
     border: 1px solid var(--glass-border);
     border-radius: var(--radius-md);
-    padding: var(--space-md);
-    transition: transform var(--duration-normal) var(--ease-out-expo), border-color var(--duration-normal), box-shadow var(--duration-normal);
+    padding: var(--space-lg) var(--space-md);
+    transition: transform var(--duration-normal) var(--ease-out-expo),
+        border-color var(--duration-normal),
+        box-shadow var(--duration-normal),
+        background var(--duration-normal);
     display: flex;
     flex-direction: column;
-    gap: 10px;
+    align-items: flex-start;
+    gap: 12px;
+    position: relative;
+    overflow: hidden;
+}
+
+.industry-card::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 2px;
+    background: var(--accent-cyan);
+    opacity: 0;
+    transition: opacity var(--duration-normal);
 }
 
 .industry-card:hover {
-    transform: translateY(-4px);
-    border-color: var(--glass-border-hover);
-    box-shadow: 0 12px 32px var(--shadow-color);
+    transform: translateY(-5px);
+    border-color: var(--accent-cyan);
+    box-shadow: 0 16px 36px hsla(var(--hue-cyan), 100%, 50%, 0.12),
+        0 4px 12px var(--shadow-color);
+    background: hsla(var(--hue-cyan), 100%, 50%, 0.03);
+}
+
+.industry-card:hover::before {
+    opacity: 1;
+}
+
+.industry-card:nth-child(2):hover {
+    border-color: var(--accent-purple);
+    box-shadow: 0 16px 36px hsla(var(--hue-purple), 80%, 55%, 0.14);
+    background: hsla(var(--hue-purple), 80%, 55%, 0.03);
+}
+
+.industry-card:nth-child(2):hover::before {
+    background: var(--accent-purple);
+}
+
+.industry-card:nth-child(4):hover {
+    border-color: var(--accent-purple);
+    box-shadow: 0 16px 36px hsla(var(--hue-purple), 80%, 55%, 0.14);
+    background: hsla(var(--hue-purple), 80%, 55%, 0.03);
+}
+
+.industry-card:nth-child(4):hover::before {
+    background: var(--accent-purple);
 }
 
 .industry-icon {
-    font-size: 2rem;
-    line-height: 1;
+    width: 46px;
+    height: 46px;
+    border-radius: var(--radius-sm);
+    background: hsla(var(--hue-cyan), 100%, 50%, 0.08);
+    border: 1px solid hsla(var(--hue-cyan), 100%, 50%, 0.2);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: var(--accent-cyan);
+    margin-bottom: 2px;
+    transition: transform var(--duration-fast), background var(--duration-fast);
+}
+
+.industry-card:nth-child(2) .industry-icon,
+.industry-card:nth-child(4) .industry-icon {
+    background: hsla(var(--hue-purple), 80%, 55%, 0.08);
+    border-color: hsla(var(--hue-purple), 80%, 55%, 0.2);
+    color: var(--accent-purple);
+}
+
+.industry-card:hover .industry-icon {
+    transform: scale(1.08);
 }
 
 .industry-title {
@@ -3385,51 +3461,77 @@ textarea.form-control {
 .industry-desc {
     font-size: var(--text-xs);
     color: var(--text-secondary);
-    line-height: 1.5;
+    line-height: 1.6;
 }
 
 .industry-tag {
     display: inline-block;
-    padding: 3px 8px;
+    padding: 3px 10px;
     border-radius: var(--radius-full);
-    background: hsla(var(--hue-cyan), 100%, 50%, 0.1);
+    background: hsla(var(--hue-cyan), 100%, 50%, 0.08);
+    border: 1px solid hsla(var(--hue-cyan), 100%, 50%, 0.18);
     color: var(--accent-cyan);
-    font-size: 0.7rem;
+    font-size: 0.68rem;
     font-weight: 600;
     align-self: flex-start;
     margin-top: auto;
 }
 
+.industry-card:nth-child(2) .industry-tag,
+.industry-card:nth-child(4) .industry-tag {
+    background: hsla(var(--hue-purple), 80%, 55%, 0.08);
+    border-color: hsla(var(--hue-purple), 80%, 55%, 0.18);
+    color: var(--accent-purple);
+}
+
 /* ─── Guarantees Grid ─── */
 .guarantees-grid {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    grid-template-columns: repeat(4, 1fr);
     gap: var(--space-md);
     margin-top: var(--space-lg);
+}
+
+@media (max-width: 960px) {
+    .guarantees-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width: 480px) {
+    .guarantees-grid {
+        grid-template-columns: 1fr;
+    }
 }
 
 .guarantee-card {
     background: var(--glass-bg);
     border: 1px solid var(--glass-border);
     border-radius: var(--radius-md);
-    padding: var(--space-md);
+    padding: var(--space-lg) var(--space-md);
     text-align: center;
     display: flex;
     flex-direction: column;
     align-items: center;
     gap: 8px;
+    transition: transform var(--duration-fast), border-color var(--duration-fast);
+}
+
+.guarantee-card:hover {
+    transform: translateY(-3px);
+    border-color: var(--glass-border-hover);
 }
 
 .guarantee-icon {
-    width: 48px;
-    height: 48px;
+    width: 44px;
+    height: 44px;
     border-radius: 50%;
-    background: hsla(var(--hue-cyan), 100%, 50%, 0.12);
+    background: hsla(var(--hue-cyan), 100%, 50%, 0.1);
+    border: 1px solid hsla(var(--hue-cyan), 100%, 50%, 0.2);
     color: var(--accent-cyan);
     display: flex;
     align-items: center;
     justify-content: center;
-    font-size: 1.4rem;
     margin-bottom: 4px;
 }
 
@@ -3443,7 +3545,7 @@ textarea.form-control {
 .guarantee-desc {
     font-size: var(--text-xs);
     color: var(--text-secondary);
-    line-height: 1.4;
+    line-height: 1.5;
 }
 
 /* ─── WhatsApp Pulse & Badge ─── */
