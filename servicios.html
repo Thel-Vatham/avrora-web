@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="es-CO">
+<html lang="es-CO" class="light-theme">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -7,7 +7,7 @@
     <meta name="description" content="Portafolio integral de ingeniería: desarrollo de software a medida, automatización de procesos con IA (RPA, OCR, bots WhatsApp), hardware IoT y diseño de producto. Precios y stack técnico transparente.">
     <meta name="keywords" content="servicios desarrollo software colombia, desarrollo web empresas, automatizacion ia rpa, ingenieria electronica iot esp32, desarrollo de producto tecnologico, bots whatsapp empresas">
     <meta name="author" content="Avrora Soluciones Tecnológicas">
-    <meta name="theme-color" content="#05050A">
+    <meta name="theme-color" content="#F4F6FB">
     <meta name="robots" content="index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1">
     <link rel="canonical" href="https://avroratech.co/servicios.html">
     <link rel="manifest" href="site.webmanifest">
@@ -44,7 +44,9 @@
     <script>
         (function() {
             var t = localStorage.getItem('avrora-theme');
-            if (t === 'light' || (!t && window.matchMedia && window.matchMedia('(prefers-color-scheme: light)').matches)) {
+            if (t === 'dark') {
+                document.documentElement.classList.remove('light-theme');
+            } else {
                 document.documentElement.classList.add('light-theme');
             }
         })();

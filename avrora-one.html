@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="es-CO">
+<html lang="es-CO" class="light-theme">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -7,7 +7,7 @@
     <meta name="description" content="AVRORA ONE: Asistente cognitivo de escritorio para Windows. Arquitectura híbrida con procesamiento local y modelos avanzados en la nube, visión por computador, memoria contextual persistente y automatización nativa de flujos de trabajo.">
     <meta name="keywords" content="agente ia escritorio, ia local vs nube, asistente cognitivo windows, automatizacion ia empresas, ia privada colombia, avrora one">
     <meta name="author" content="Avrora Soluciones Tecnológicas">
-    <meta name="theme-color" content="#05050A">
+    <meta name="theme-color" content="#F4F6FB">
     <meta name="robots" content="index, follow">
     <link rel="canonical" href="https://avroratech.co/avrora-one.html">
 
@@ -29,7 +29,9 @@
     <script>
         (function() {
             var t = localStorage.getItem('avrora-theme');
-            if (t === 'light' || (!t && window.matchMedia && window.matchMedia('(prefers-color-scheme: light)').matches)) {
+            if (t === 'dark') {
+                document.documentElement.classList.remove('light-theme');
+            } else {
                 document.documentElement.classList.add('light-theme');
             }
         })();

@@ -564,7 +564,7 @@
     const getPreferredTheme = () => {
         const stored = getStoredTheme();
         if (stored === 'light' || stored === 'dark') return stored;
-        return window.matchMedia && window.matchMedia('(prefers-color-scheme: light)').matches ? 'light' : 'dark';
+        return 'light';
     };
 
     const updateToggleUI = (theme) => {

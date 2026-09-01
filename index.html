@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="es-CO">
+<html lang="es-CO" class="light-theme">
 
 <head>
     <meta charset="UTF-8">
@@ -10,7 +10,7 @@
     <meta name="keywords"
         content="desarrollo de software a medida colombia, inteligencia artificial empresas, automatizacion rpa bogota medellin, desarrollo web corporativo, ingenieria electronica iot, bots whatsapp b2b, software a medida cali barranquilla, digitalizacion de empresas colombia">
     <meta name="author" content="Avrora Soluciones Tecnológicas">
-    <meta name="theme-color" content="#05050A">
+    <meta name="theme-color" content="#F4F6FB">
     <meta name="robots" content="index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1">
     <link rel="canonical" href="https://avroratech.co/">
     <link rel="manifest" href="site.webmanifest">
@@ -63,7 +63,9 @@
     <script>
         (function() {
             var t = localStorage.getItem('avrora-theme');
-            if (t === 'light' || (!t && window.matchMedia && window.matchMedia('(prefers-color-scheme: light)').matches)) {
+            if (t === 'dark') {
+                document.documentElement.classList.remove('light-theme');
+            } else {
                 document.documentElement.classList.add('light-theme');
             }
         })();

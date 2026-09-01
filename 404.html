@@ -1,12 +1,12 @@
 <!DOCTYPE html>
-<html lang="es-CO">
+<html lang="es-CO" class="light-theme">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Página no encontrada | Avrora Tech</title>
     <meta name="description" content="La página que buscas no existe. Regresa al inicio de Avrora Tech.">
     <meta name="robots" content="noindex, follow">
-    <meta name="theme-color" content="#05050A">
+    <meta name="theme-color" content="#F4F6FB">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Outfit:wght@700;800&display=swap" rel="stylesheet">
@@ -17,7 +17,9 @@
     <script>
         (function() {
             var t = localStorage.getItem('avrora-theme');
-            if (t === 'light' || (!t && window.matchMedia && window.matchMedia('(prefers-color-scheme: light)').matches)) {
+            if (t === 'dark') {
+                document.documentElement.classList.remove('light-theme');
+            } else {
                 document.documentElement.classList.add('light-theme');
             }
         })();
