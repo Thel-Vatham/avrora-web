@@ -140,16 +140,16 @@
         counterEls.forEach(el => counterObserver.observe(el));
     }
 
-    /* ─── Canvas Particle System (Hero) ─── */
+    /* ─── Canvas Particle System (Hero - Ultra Optimized) ─── */
     const canvas = $('#particles-canvas');
 
-    if (canvas) {
-        const ctx = canvas.getContext('2d');
-        let W, H, particles = [], animFrame;
+    if (canvas && !window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
+        const ctx = canvas.getContext('2d', { alpha: true });
+        let W, H, particles = [], animFrame = null, isScrolling = false, scrollTimeout = null;
 
-        const PARTICLE_COUNT = 55;
-        const CYAN  = [0, 242, 255];   // HSL 185 cyan
-        const VIOLET = [123, 97, 255]; // HSL 265 violet
+        const PARTICLE_COUNT = 24;
+        const CYAN  = [0, 242, 255];
+        const VIOLET = [123, 97, 255];
 
         const lerpColor = (c1, c2, t) =>
             c1.map((v, i) => Math.round(v + (c2[i] - v) * t));
@@ -160,11 +160,11 @@
             reset(init = false) {
                 this.x = Math.random() * W;
                 this.y = init ? Math.random() * H : H + 10;
-                this.size = Math.random() * 1.5 + 0.4;
-                this.speedX = (Math.random() - 0.5) * 0.35;
-                this.speedY = -(Math.random() * 0.5 + 0.15);
+                this.size = Math.random() * 1.5 + 0.5;
+                this.speedX = (Math.random() - 0.5) * 0.3;
+                this.speedY = -(Math.random() * 0.4 + 0.15);
                 this.life = 0;
-                this.maxLife = Math.random() * 220 + 120;
+                this.maxLife = Math.random() * 200 + 120;
                 this.colorT = Math.random();
             }
 
@@ -188,8 +188,8 @@
                 ctx.beginPath();
                 ctx.arc(this.x, this.y, this.size, 0, Math.PI * 2);
                 ctx.fillStyle = isLight
-                    ? `rgba(0, 155, 185, ${alpha * 0.45})`
-                    : `rgba(${r},${g},${b},${alpha * 0.55})`;
+                    ? `rgba(0, 155, 185, ${alpha * 0.4})`
+                    : `rgba(${r},${g},${b},${alpha * 0.5})`;
                 ctx.fill();
             }
         }
@@ -206,17 +206,24 @@
 
         const connectParticles = () => {
             const isLight = document.body.classList.contains('light-theme');
-            const maxDist = isLight ? 115 : 95;
+            const maxDist = isLight ? 100 : 85;
+            const maxDistSq = maxDist * maxDist;
+
             for (let i = 0; i < particles.length; i++) {
+                const p1 = particles[i];
                 for (let j = i + 1; j < particles.length; j++) {
-                    const dx = particles[i].x - particles[j].x;
-                    const dy = particles[i].y - particles[j].y;
-                    const dist = Math.sqrt(dx * dx + dy * dy);
-                    if (dist < maxDist) {
-                        const alpha = (1 - dist / maxDist) * (isLight ? 0.22 : 0.15);
+                    const p2 = particles[j];
+                    const dx = p1.x - p2.x;
+                    if (Math.abs(dx) > maxDist) continue;
+                    const dy = p1.y - p2.y;
+                    if (Math.abs(dy) > maxDist) continue;
+                    
+                    const distSq = dx * dx + dy * dy;
+                    if (distSq < maxDistSq) {
+                        const alpha = (1 - Math.sqrt(distSq) / maxDist) * (isLight ? 0.2 : 0.15);
                         ctx.beginPath();
-                        ctx.moveTo(particles[i].x, particles[i].y);
-                        ctx.lineTo(particles[j].x, particles[j].y);
+                        ctx.moveTo(p1.x, p1.y);
+                        ctx.lineTo(p2.x, p2.y);
                         ctx.strokeStyle = isLight
                             ? `rgba(0, 160, 210, ${alpha})`
                             : `rgba(0, 242, 255, ${alpha})`;
@@ -228,20 +235,28 @@
         };
 
         const loop = () => {
-            ctx.clearRect(0, 0, W, H);
-            particles.forEach(p => { p.update(); p.draw(); });
-            connectParticles();
+            if (!isScrolling) {
+                ctx.clearRect(0, 0, W, H);
+                for (let i = 0; i < particles.length; i++) {
+                    particles[i].update();
+                    particles[i].draw();
+                }
+                connectParticles();
+            }
             animFrame = requestAnimationFrame(loop);
         };
 
-        window.addEventListener('resize', () => {
-            resize();
-            particles.forEach(p => {
-                if (p.x > W) p.x = Math.random() * W;
-            });
+        window.addEventListener('resize', resize, { passive: true });
+
+        window.addEventListener('scroll', () => {
+            isScrolling = true;
+            clearTimeout(scrollTimeout);
+            scrollTimeout = setTimeout(() => {
+                isScrolling = false;
+            }, 100);
         }, { passive: true });
 
-        // Only run particles when visible
+        // Only run particles when hero is visible
         if ('IntersectionObserver' in window) {
             const heroObs = new IntersectionObserver((entries) => {
                 entries.forEach(e => {

@@ -157,38 +157,26 @@ body.light-theme {
     --contact-chip-hover-bg: hsla(var(--hue-cyan), 100%, 38%, 0.1);
 }
 
-/* ─── Light Mode Dynamic Futuristic Motion ─── */
+/* ─── Light Mode Dynamic Futuristic Motion (GPU Accelerated) ─── */
 html.light-theme .aurora-bg::before,
 body.light-theme .aurora-bg::before {
-    background: radial-gradient(circle, hsla(265, 85%, 65%, 0.28), transparent 70%);
-    animation: aurora-drift-1 18s ease-in-out infinite alternate, aurora-hue-pulse 20s ease-in-out infinite alternate;
+    background: radial-gradient(circle, hsla(265, 85%, 65%, 0.22), transparent 70%);
+    animation: aurora-drift-1 25s ease-in-out infinite alternate;
 }
 
 html.light-theme .aurora-bg::after,
 body.light-theme .aurora-bg::after {
-    background: radial-gradient(circle, hsla(192, 100%, 50%, 0.28), transparent 70%);
-    animation: aurora-drift-2 15s ease-in-out infinite alternate, aurora-hue-pulse 24s ease-in-out infinite alternate-reverse;
-}
-
-@keyframes aurora-hue-pulse {
-    0% { filter: blur(100px) hue-rotate(0deg); }
-    50% { filter: blur(120px) hue-rotate(30deg); }
-    100% { filter: blur(100px) hue-rotate(-20deg); }
+    background: radial-gradient(circle, hsla(192, 100%, 50%, 0.22), transparent 70%);
+    animation: aurora-drift-2 20s ease-in-out infinite alternate;
 }
 
 html.light-theme .noise-overlay,
 body.light-theme .noise-overlay {
-    opacity: 0.05;
+    opacity: 0.04;
     background-image: 
-        linear-gradient(to right, rgba(0, 160, 220, 0.1) 1px, transparent 1px),
-        linear-gradient(to bottom, rgba(0, 160, 220, 0.1) 1px, transparent 1px);
-    background-size: 44px 44px;
-    animation: gridMove 35s linear infinite;
-}
-
-@keyframes gridMove {
-    0% { background-position: 0 0; }
-    100% { background-position: 44px 44px; }
+        linear-gradient(to right, rgba(0, 160, 220, 0.08) 1px, transparent 1px),
+        linear-gradient(to bottom, rgba(0, 160, 220, 0.08) 1px, transparent 1px);
+    background-size: 48px 48px;
 }
 
 /* ─── Hero Visual SVG Sharp Light Mode Styling ─── */
@@ -772,32 +760,83 @@ body.light-theme .theme-toggle-btn .moon-icon {
     min-height: 100dvh;
     display: flex;
     align-items: center;
-    padding-top: var(--header-h);
+    padding-top: calc(var(--header-h) + var(--space-md));
+    padding-bottom: var(--space-xl);
+}
+
+.hero-split {
+    display: grid;
+    grid-template-columns: 1fr 1.08fr;
+    gap: var(--space-xl);
+    align-items: center;
+    width: 100%;
+}
+
+@media (max-width: 992px) {
+    .hero-split {
+        grid-template-columns: 1fr;
+        gap: var(--space-xl);
+        text-align: center;
+    }
+
+    .hero-content {
+        max-width: 100% !important;
+    }
+
+    .hero-cta,
+    .hero-trust-bar {
+        justify-content: center;
+    }
 }
 
 .hero-content {
-    max-width: 780px;
+    max-width: 580px;
+    z-index: 2;
 }
 
 .hero-title {
-    font-size: clamp(1.75rem, 1.2rem + 1.8vw, 2.75rem);
-    line-height: 1.35;
-    font-weight: 700;
-    margin-bottom: var(--space-lg);
+    font-size: clamp(1.85rem, 1.3rem + 2vw, 3rem);
+    line-height: 1.25;
+    font-weight: 800;
+    margin-bottom: var(--space-md);
+    letter-spacing: -0.02em;
 }
 
 .hero-subtitle {
-    font-size: var(--text-lg);
+    font-size: var(--text-base);
     color: var(--text-secondary);
     margin-bottom: var(--space-lg);
-    max-width: 600px;
-    line-height: 1.7;
+    line-height: 1.65;
 }
 
 .hero-cta {
     display: flex;
     gap: var(--space-md);
     flex-wrap: wrap;
+    margin-bottom: var(--space-lg);
+}
+
+/* ─── Hero Visual & Blueprint Vector Graphics ─── */
+.hero-visual {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    z-index: 1;
+}
+
+.blueprint-svg {
+    width: 100%;
+    max-width: 620px;
+    height: auto;
+    display: block;
+    filter: drop-shadow(0 16px 40px var(--shadow-color));
+    transition: transform var(--duration-normal) var(--ease-out-expo);
+}
+
+.blueprint-svg:hover {
+    transform: scale(1.02);
 }
 
 /* --- Layer 8: Glass Cards --- */

@@ -289,97 +289,100 @@
 
                 <!-- ─── Hero SVG — Diagrama Técnico de Arquitectura e Ingeniería ─── -->
                 <div class="hero-visual reveal" aria-hidden="true">
-                    <svg viewBox="0 0 460 420" fill="none" xmlns="http://www.w3.org/2000/svg" class="blueprint-svg">
+                    <svg viewBox="0 0 580 480" fill="none" xmlns="http://www.w3.org/2000/svg" class="blueprint-svg">
                         <defs>
-                            <!-- Filtros de renderizado de alta precisión -->
-                            <filter id="bp-glow" x="-30%" y="-30%" width="160%" height="160%">
-                                <feGaussianBlur stdDeviation="3.5" result="blur" />
-                                <feMerge>
-                                    <feMergeNode in="blur" />
-                                    <feMergeNode in="SourceGraphic" />
-                                </feMerge>
-                            </filter>
                             <linearGradient id="bp-cyan-purple" x1="0%" y1="0%" x2="100%" y2="100%">
                                 <stop offset="0%" stop-color="var(--accent-cyan)" stop-opacity="0.9" />
                                 <stop offset="100%" stop-color="var(--accent-purple)" stop-opacity="0.8" />
                             </linearGradient>
                             <radialGradient id="bp-center-grad" cx="50%" cy="50%" r="50%">
-                                <stop offset="0%" stop-color="var(--accent-cyan)" stop-opacity="0.16" />
-                                <stop offset="70%" stop-color="var(--accent-purple)" stop-opacity="0.04" />
+                                <stop offset="0%" stop-color="var(--accent-cyan)" stop-opacity="0.2" />
+                                <stop offset="70%" stop-color="var(--accent-purple)" stop-opacity="0.06" />
                                 <stop offset="100%" stop-color="transparent" />
                             </radialGradient>
                         </defs>
 
-                        <!-- Retícula técnica de fondo -->
+                        <!-- Retícula técnica y guías de bus -->
                         <g opacity="0.35" stroke="var(--glass-border)">
-                            <line x1="40" y1="210" x2="420" y2="210" stroke-width="0.8" stroke-dasharray="3 6" />
-                            <line x1="230" y1="30" x2="230" y2="390" stroke-width="0.8" stroke-dasharray="3 6" />
-                            <circle cx="230" cy="210" r="170" stroke-width="0.8" stroke-dasharray="4 8" fill="none" />
-                            <circle cx="230" cy="210" r="115" stroke-width="0.8" fill="none" />
+                            <line x1="30" y1="240" x2="550" y2="240" stroke-width="1" stroke-dasharray="4 6" />
+                            <line x1="290" y1="30" x2="290" y2="450" stroke-width="1" stroke-dasharray="4 6" />
+                            <circle cx="290" cy="240" r="190" stroke-width="1" stroke-dasharray="4 8" fill="none" />
+                            <circle cx="290" cy="240" r="130" stroke-width="1" fill="none" />
                         </g>
 
                         <!-- Halo de núcleo -->
-                        <circle cx="230" cy="210" r="85" fill="url(#bp-center-grad)" />
+                        <circle cx="290" cy="240" r="110" fill="url(#bp-center-grad)" />
 
-                        <!-- Bus de interconexión (Líneas de bus ortogonales y diagonales) -->
-                        <g stroke="var(--accent-cyan)" stroke-width="1.2" opacity="0.65">
-                            <line x1="230" y1="210" x2="100" y2="90" stroke-dasharray="4 4" class="orbit-line" />
-                            <line x1="230" y1="210" x2="360" y2="90" stroke-dasharray="4 4" class="orbit-line" />
-                            <line x1="230" y1="210" x2="360" y2="330" stroke-dasharray="4 4" class="orbit-line" />
-                            <line x1="230" y1="210" x2="100" y2="330" stroke-dasharray="4 4" class="orbit-line" />
+                        <!-- Buses de conexión en cruz y diagonales -->
+                        <g stroke="var(--accent-cyan)" stroke-width="1.5" opacity="0.75">
+                            <line x1="290" y1="240" x2="135" y2="90" stroke-dasharray="4 4" class="orbit-line" />
+                            <line x1="290" y1="240" x2="445" y2="90" stroke-dasharray="4 4" class="orbit-line" />
+                            <line x1="290" y1="240" x2="445" y2="390" stroke-dasharray="4 4" class="orbit-line" />
+                            <line x1="290" y1="240" x2="135" y2="390" stroke-dasharray="4 4" class="orbit-line" />
                         </g>
 
                         <!-- Marco perimetral del sistema -->
-                        <polygon points="100,90 360,90 360,330 100,330" fill="none" stroke="var(--glass-border-hover)" stroke-width="1" stroke-dasharray="2 6" />
+                        <polygon points="135,90 445,90 445,390 135,390" fill="none" stroke="var(--glass-border-hover)" stroke-width="1.2" stroke-dasharray="4 6" />
 
-                        <!-- NODO CENTRAL: Core Arquitectónico -->
-                        <rect x="175" y="165" width="110" height="90" rx="10" fill="var(--bg-elevated)" stroke="url(#bp-cyan-purple)" stroke-width="1.6" filter="url(#bp-glow)" />
-                        <rect x="183" y="173" width="94" height="74" rx="6" fill="var(--glass-bg)" stroke="var(--glass-border)" stroke-width="1" />
-                        <text x="230" y="202" text-anchor="middle" fill="var(--text-primary)" font-family="Outfit, sans-serif" font-size="12" font-weight="800" letter-spacing="2">AVRORA</text>
-                        <text x="230" y="218" text-anchor="middle" fill="var(--accent-cyan)" font-family="Inter, sans-serif" font-size="8.5" font-weight="700" letter-spacing="1.5">CORE SYSTEM</text>
-                        <circle cx="230" cy="233" r="3" fill="var(--status-success)" />
-
-                        <!-- NODO 1 (Superior Izquierda): Software Core -->
-                        <g class="node-pulse">
-                            <rect x="40" y="60" width="120" height="60" rx="8" fill="var(--bg-elevated)" stroke="var(--accent-cyan)" stroke-width="1.2" />
-                            <circle cx="60" cy="90" r="10" fill="hsla(var(--hue-cyan), 100%, 50%, 0.1)" stroke="var(--accent-cyan)" stroke-width="1" />
-                            <path d="M56 87l3 3-3 3M61 93h4" stroke="var(--accent-cyan)" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round" />
-                            <text x="80" y="86" fill="var(--text-primary)" font-family="Outfit, sans-serif" font-size="10" font-weight="700">Software &amp; Web</text>
-                            <text x="80" y="100" fill="var(--text-secondary)" font-family="Inter, sans-serif" font-size="7.5">APIs, DB &amp; UI</text>
+                        <!-- NODO CENTRAL: Core Arquitectónico Avrora -->
+                        <g>
+                            <rect x="205" y="180" width="170" height="120" rx="14" fill="var(--bg-elevated)" stroke="url(#bp-cyan-purple)" stroke-width="2" />
+                            <rect x="215" y="190" width="150" height="100" rx="10" fill="var(--glass-bg)" stroke="var(--glass-border)" stroke-width="1" />
+                            <text x="290" y="222" text-anchor="middle" fill="var(--text-primary)" font-family="Outfit, sans-serif" font-size="16" font-weight="800" letter-spacing="2">AVRORA</text>
+                            <text x="290" y="242" text-anchor="middle" fill="var(--accent-cyan)" font-family="Inter, sans-serif" font-size="10.5" font-weight="700" letter-spacing="1.5">CORE SYSTEM</text>
+                            <circle cx="250" cy="265" r="4" fill="var(--status-success)" />
+                            <text x="262" y="268" fill="var(--text-secondary)" font-family="monospace" font-size="9.5" font-weight="600">0ms · ONLINE</text>
                         </g>
 
-                        <!-- NODO 2 (Superior Derecha): Inteligencia Artificial -->
+                        <!-- NODO 1 (Superior Izquierda): Software & Web Ecosystem -->
+                        <g class="node-pulse">
+                            <rect x="25" y="45" width="185" height="85" rx="10" fill="var(--bg-elevated)" stroke="var(--accent-cyan)" stroke-width="1.6" />
+                            <circle cx="50" cy="75" r="13" fill="hsla(var(--hue-cyan), 100%, 50%, 0.12)" stroke="var(--accent-cyan)" stroke-width="1.2" />
+                            <path d="M46 72l4 3-4 3M52 78h4" stroke="var(--accent-cyan)" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
+                            <text x="72" y="73" fill="var(--text-primary)" font-family="Outfit, sans-serif" font-size="13.5" font-weight="700">Software &amp; Web</text>
+                            <text x="72" y="90" fill="var(--text-secondary)" font-family="Inter, sans-serif" font-size="10.5">APIs, DBs, Paneles &amp; UI</text>
+                            <text x="72" y="110" fill="var(--accent-cyan)" font-family="monospace" font-size="9" letter-spacing="0.5">Python · FastAPI · PostgreSQL</text>
+                        </g>
+
+                        <!-- NODO 2 (Superior Derecha): IA & Router Híbrido -->
                         <g class="node-pulse-2">
-                            <rect x="300" y="60" width="120" height="60" rx="8" fill="var(--bg-elevated)" stroke="var(--accent-purple)" stroke-width="1.2" />
-                            <circle cx="320" cy="90" r="10" fill="hsla(var(--hue-purple), 80%, 55%, 0.1)" stroke="var(--accent-purple)" stroke-width="1" />
-                            <path d="M317 87a3 3 0 1 0 6 0 3 3 0 0 0-6 0M320 90v4" stroke="var(--accent-purple)" stroke-width="1.2" stroke-linecap="round" />
-                            <text x="338" y="86" fill="var(--text-primary)" font-family="Outfit, sans-serif" font-size="10" font-weight="700">IA &amp; Agentes</text>
-                            <text x="338" y="100" fill="var(--text-secondary)" font-family="Inter, sans-serif" font-size="7.5">LLMs &amp; OCR Local</text>
+                            <rect x="370" y="45" width="185" height="85" rx="10" fill="var(--bg-elevated)" stroke="var(--accent-purple)" stroke-width="1.6" />
+                            <circle cx="395" cy="75" r="13" fill="hsla(var(--hue-purple), 80%, 55%, 0.12)" stroke="var(--accent-purple)" stroke-width="1.2" />
+                            <path d="M391 72a4 4 0 1 0 8 0 4 4 0 0 0-8 0M395 76v4" stroke="var(--accent-purple)" stroke-width="1.5" stroke-linecap="round" />
+                            <text x="417" y="73" fill="var(--text-primary)" font-family="Outfit, sans-serif" font-size="13.5" font-weight="700">IA &amp; Router Híbrido</text>
+                            <text x="417" y="90" fill="var(--text-secondary)" font-family="Inter, sans-serif" font-size="10.5">Local GGUF + Cloud LLM</text>
+                            <text x="417" y="110" fill="var(--accent-purple)" font-family="monospace" font-size="9" letter-spacing="0.5">llama.cpp · DeepSeek · ONNX</text>
                         </g>
 
-                        <!-- NODO 3 (Inferior Derecha): Hardware & IoT -->
-                        <g class="node-pulse-3">
-                            <rect x="300" y="300" width="120" height="60" rx="8" fill="var(--bg-elevated)" stroke="var(--accent-cyan)" stroke-width="1.2" />
-                            <circle cx="320" cy="330" r="10" fill="hsla(var(--hue-cyan), 100%, 50%, 0.1)" stroke="var(--accent-cyan)" stroke-width="1" />
-                            <path d="M316 327h8v6h-8zM320 324v3M320 333v3" stroke="var(--accent-cyan)" stroke-width="1.2" stroke-linecap="round" />
-                            <text x="338" y="326" fill="var(--text-primary)" font-family="Outfit, sans-serif" font-size="10" font-weight="700">IoT &amp; Hardware</text>
-                            <text x="338" y="340" fill="var(--text-secondary)" font-family="Inter, sans-serif" font-size="7.5">ESP32 / SCADA</text>
-                        </g>
-
-                        <!-- NODO 4 (Inferior Izquierda): Automatización RPA -->
+                        <!-- NODO 3 (Inferior Izquierda): Automatización & RPA -->
                         <g class="node-pulse">
-                            <rect x="40" y="300" width="120" height="60" rx="8" fill="var(--bg-elevated)" stroke="var(--accent-purple)" stroke-width="1.2" />
-                            <circle cx="60" cy="330" r="10" fill="hsla(var(--hue-purple), 80%, 55%, 0.1)" stroke="var(--accent-purple)" stroke-width="1" />
-                            <path d="M57 330l3-3 3 3M60 327v6" stroke="var(--accent-purple)" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round" />
-                            <text x="78" y="326" fill="var(--text-primary)" font-family="Outfit, sans-serif" font-size="10" font-weight="700">Automatización</text>
-                            <text x="78" y="340" fill="var(--text-secondary)" font-family="Inter, sans-serif" font-size="7.5">Pipelines &amp; RPA</text>
+                            <rect x="25" y="350" width="185" height="85" rx="10" fill="var(--bg-elevated)" stroke="var(--accent-purple)" stroke-width="1.6" />
+                            <circle cx="50" cy="380" r="13" fill="hsla(var(--hue-purple), 80%, 55%, 0.12)" stroke="var(--accent-purple)" stroke-width="1.2" />
+                            <path d="M47 381l3-3 3 3M50 378v6" stroke="var(--accent-purple)" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
+                            <text x="72" y="378" fill="var(--text-primary)" font-family="Outfit, sans-serif" font-size="13.5" font-weight="700">Automatización RPA</text>
+                            <text x="72" y="395" fill="var(--text-secondary)" font-family="Inter, sans-serif" font-size="10.5">OCR, Flujos &amp; Bots 24/7</text>
+                            <text x="72" y="415" fill="var(--accent-purple)" font-family="monospace" font-size="9" letter-spacing="0.5">Pipelines · Visión CPU</text>
+                        </g>
+
+                        <!-- NODO 4 (Inferior Derecha): Hardware & IoT Embebido -->
+                        <g class="node-pulse-3">
+                            <rect x="370" y="350" width="185" height="85" rx="10" fill="var(--bg-elevated)" stroke="var(--accent-cyan)" stroke-width="1.6" />
+                            <circle cx="395" cy="380" r="13" fill="hsla(var(--hue-cyan), 100%, 50%, 0.12)" stroke="var(--accent-cyan)" stroke-width="1.2" />
+                            <path d="M390 376h10v8h-10zM395 372v4M395 384v4" stroke="var(--accent-cyan)" stroke-width="1.5" stroke-linecap="round" />
+                            <text x="417" y="378" fill="var(--text-primary)" font-family="Outfit, sans-serif" font-size="13.5" font-weight="700">IoT &amp; Hardware</text>
+                            <text x="417" y="395" fill="var(--text-secondary)" font-family="Inter, sans-serif" font-size="10.5">Sensores &amp; Paneles SCADA</text>
+                            <text x="417" y="415" fill="var(--accent-cyan)" font-family="monospace" font-size="9" letter-spacing="0.5">ESP32 · STM32 · Telemetría</text>
                         </g>
 
                         <!-- Indicadores de estado de telemetría en esquinas -->
-                        <text x="40" y="45" fill="var(--text-tertiary)" font-family="monospace" font-size="8" letter-spacing="1">[STATUS: OPTIMAL]</text>
-                        <text x="340" y="45" fill="var(--text-tertiary)" font-family="monospace" font-size="8" letter-spacing="1">FREQ: 240 MHz</text>
-                        <text x="40" y="385" fill="var(--text-tertiary)" font-family="monospace" font-size="8" letter-spacing="1">4.71°N / 74.07°W</text>
-                        <text x="330" y="385" fill="var(--text-tertiary)" font-family="monospace" font-size="8" lett        <!-- ─── Stats / Métricas ─── -->
+                        <text x="30" y="25" fill="var(--text-tertiary)" font-family="monospace" font-size="10" letter-spacing="1">[LAT: 4.71°N / LON: 74.07°W]</text>
+                        <text x="415" y="25" fill="var(--text-tertiary)" font-family="monospace" font-size="10" letter-spacing="1">FREQ: 240 MHz · READY</text>
+                        <text x="30" y="465" fill="var(--text-tertiary)" font-family="monospace" font-size="10" letter-spacing="1">[FAILOVER: DUAL ACTIVE]</text>
+                        <text x="415" y="465" fill="var(--text-tertiary)" font-family="monospace" font-size="10" letter-spacing="1">[PROTOCOL: SECURE REST/WS]</text>
+                    </svg>
+                </div>
+            </div>
+        </section>
         <section class="stats-section" aria-label="Métricas clave">
             <div class="container">
                 <div class="stats-grid">
@@ -499,18 +502,18 @@
                     <div class="teaser-left">
                         <span class="teaser-badge">
                             <span class="teaser-dot"></span>
-                            En desarrollo activo
+                            Proyecto Core en Desarrollo
                         </span>
-                        <h3 class="teaser-title">AVRORA ONE — Agente de IA local</h3>
-                        <p class="teaser-desc">Plataforma cognitiva modular para Windows: inferencia local con llama.cpp, embeddings semánticos ONNX, visión en CPU, memoria persistente SQLite WAL y más de 22 herramientas nativas. Operación 100% offline y privada.</p>
+                        <h3 class="teaser-title">AVRORA ONE — Agente Cognitivo de Escritorio</h3>
+                        <p class="teaser-desc">Acompañamiento inteligente y automatización absoluta en Windows: orquestador híbrido con inferencia local GGUF (llama.cpp) y modelos en la nube (DeepSeek/OpenAI), visión por computador en CPU, memoria semántica SQLite WAL y más de 22 herramientas de sistema.</p>
                     </div>
                     <div class="teaser-right" style="display:flex; gap:10px; flex-wrap:wrap;">
                         <a href="avrora-one.html" class="btn btn-primary" data-track="teaser_avrora_one_landing">
-                            Conocer arquitectura y avances →
+                            Conocer arquitectura y capacidades →
                         </a>
-                        <a href="https://wa.me/573004002881?text=Hola%20Avrora,%20quiero%20más%20información%20sobre%20AVRORA%20ONE"
+                        <a href="https://wa.me/573004002881?text=Hola%20Avrora%20Tech,%20quiero%20conocer%20más%20sobre%20AVRORA%20ONE"
                             target="_blank" rel="noopener" class="btn btn-secondary" data-track="teaser_avrora_one_click">
-                            Notifícame al lanzar
+                            Solicitar Demo Técnica
                         </a>
                     </div>
                 </div>
