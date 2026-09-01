@@ -338,6 +338,15 @@
 
         if (typeof window.gtag === 'function') {
             window.gtag('event', eventName, params);
+
+            // Fire primary Google Ads Conversion tag for high-intent actions
+            if (eventName === 'generate_lead' || eventName.includes('wa_click') || eventName.includes('contacto')) {
+                window.gtag('event', 'conversion', {
+                    'send_to': 'AW-18422736120/vOyKCJ7X9escEPjJ0tBE',
+                    'value': 1.0,
+                    'currency': 'COP'
+                });
+            }
         }
     };
 

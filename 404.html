@@ -16,6 +16,23 @@
       gtag('js', new Date());
       gtag('config', 'AW-18422736120');
     </script>
+    <!-- Event snippet for Contacto conversion page -->
+    <script>
+      function gtag_report_conversion(url) {
+        var callback = function () {
+          if (typeof(url) != 'undefined') {
+            window.location = url;
+          }
+        };
+        gtag('event', 'conversion', {
+            'send_to': 'AW-18422736120/vOyKCJ7X9escEPjJ0tBE',
+            'value': 1.0,
+            'currency': 'COP',
+            'event_callback': callback
+        });
+        return false;
+      }
+    </script>
 
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
