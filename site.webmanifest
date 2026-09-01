@@ -1,0 +1,27 @@
+{
+  "name": "Avrora Tech — Software, IA e Ingeniería",
+  "short_name": "Avrora Tech",
+  "description": "Ingeniería de software, automatización con IA y electrónica embebida para empresas.",
+  "start_url": "/index.html",
+  "display": "standalone",
+  "background_color": "#05050A",
+  "theme_color": "#05050A",
+  "icons": [
+    {
+      "src": "assets/icons/favicon.svg",
+      "sizes": "any",
+      "type": "image/svg+xml",
+      "purpose": "any maskable"
+    },
+    {
+      "src": "assets/icons/android-chrome-512x512.png",
+      "sizes": "512x512",
+      "type": "image/png"
+    },
+    {
+      "src": "assets/icons/apple-touch-icon.png",
+      "sizes": "180x180",
+      "type": "image/png"
+    }
+  ]
+}

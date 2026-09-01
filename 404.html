@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="es-CO">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Página no encontrada | Avrora Tech</title>
+    <meta name="description" content="La página que buscas no existe. Regresa al inicio de Avrora Tech.">
+    <meta name="robots" content="noindex, follow">
+    <meta name="theme-color" content="#05050A">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Outfit:wght@700;800&display=swap" rel="stylesheet">
+    <link rel="icon" type="image/svg+xml" href="assets/icons/favicon.svg">
+    <link rel="alternate icon" type="image/png" href="assets/images/logo.png">
+    <link rel="apple-touch-icon" href="assets/icons/apple-touch-icon.png">
+    <link rel="stylesheet" href="css/style.css">
+    <script>
+        (function() {
+            var t = localStorage.getItem('avrora-theme');
+            if (t === 'light' || (!t && window.matchMedia && window.matchMedia('(prefers-color-scheme: light)').matches)) {
+                document.documentElement.classList.add('light-theme');
+            }
+        })();
+    </script>
+</head>
+<body>
+    <div class="aurora-bg" aria-hidden="true"></div>
+    <div class="noise-overlay" aria-hidden="true"></div>
+
+    <!-- Header mínimo -->
+    <header class="glass-header scrolled" id="main-header">
+        <div class="container nav-container">
+            <a href="index.html" class="logo-link" aria-label="Avrora Tech — Inicio">
+                <img src="assets/images/logo.png" alt="Avrora Logo" class="logo-img" width="44" height="44">
+                <span class="logo-text">AVRORA <span class="highlight">TECH</span></span>
+            </a>
+            <nav class="desktop-nav" aria-label="Navegación principal">
+                <a href="index.html">Inicio</a>
+                <a href="servicios.html">Servicios</a>
+                <a href="index.html#contacto" class="btn btn-outline">Contacto</a>
+                <button class="theme-toggle-btn" aria-label="Cambiar modo de color" title="Cambiar modo de color">
+                    <svg class="sun-icon" viewBox="0 0 24 24"><circle cx="12" cy="12" r="5"/><path d="M12 1v2M12 21v2M4.22 4.22l1.42 1.42M18.36 18.36l1.42 1.42M1 12h2M21 12h2M4.22 19.78l1.42-1.42M18.36 5.64l1.42-1.42"/></svg>
+                    <svg class="moon-icon" viewBox="0 0 24 24"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/></svg>
+                </button>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        <div class="page-404">
+            <div>
+                <div class="page-404-code">404</div>
+                <h1 class="page-404-title">Página no encontrada</h1>
+                <p class="page-404-desc">La ruta que buscas no existe o fue movida. No te preocupes — todo lo demás sigue funcionando.</p>
+                <div style="display:flex; gap:1rem; justify-content:center; flex-wrap:wrap;">
+                    <a href="index.html" class="btn btn-primary">Ir al Inicio</a>
+                    <a href="servicios.html" class="btn btn-secondary">Ver Servicios</a>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <script src="js/script.js"></script>
+</body>
+</html>
