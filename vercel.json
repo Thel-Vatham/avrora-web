@@ -1,5 +1,6 @@
 {
   "version": 2,
+  "name": "avrora-web",
   "cleanUrls": true,
   "trailingSlash": false,
   "headers": [
